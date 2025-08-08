@@ -76,7 +76,7 @@ const Hero: React.FC = () => {
             name: 'Motor',
             slug: 'motor',
             description: 'Drive with confidence',
-            icon_path: '/images/cyber-security-icon.png',
+            icon_path: '/images/car.png',
             statistics: [
               'Motor insurance is mandatory by law in India.',
               'Comprehensive coverage protects against accidents, theft, and natural disasters.'
@@ -115,7 +115,7 @@ const Hero: React.FC = () => {
             name: 'Home',
             slug: 'home',
             description: 'Protect your home and belongings',
-            icon_path: '/images/cyber-security-icon.png',
+            icon_path: '/images/honest.png',
             statistics: [
               '₹ 1 lakh cr+ (US $12 bn) in property losses from natural catastrophes hit India in 2023 alone.',
               'Floods drive 63% of those annual losses — they\'re now the number-one threat to property.'
