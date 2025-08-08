@@ -112,34 +112,34 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               </h4>
               <ul className="space-y-2">
                 <li>
-                  <a href="#" className="font-satoshi font-normal text-[14px] text-black hover:text-gray-600 transition-colors">
+                  <button className="font-satoshi font-normal text-[14px] text-black hover:text-gray-600 transition-colors text-left">
                     Health Insurance
-                  </a>
+                  </button>
                 </li>
                 <li>
-                  <a href="#" className="font-satoshi font-normal text-[14px] text-black hover:text-gray-600 transition-colors">
+                  <button className="font-satoshi font-normal text-[14px] text-black hover:text-gray-600 transition-colors text-left">
                     Life Insurance
-                  </a>
+                  </button>
                 </li>
                 <li>
-                  <a href="#" className="font-satoshi font-normal text-[14px] text-black hover:text-gray-600 transition-colors">
+                  <button className="font-satoshi font-normal text-[14px] text-black hover:text-gray-600 transition-colors text-left">
                     Motor Insurance
-                  </a>
+                  </button>
                 </li>
                 <li>
-                  <a href="#" className="font-satoshi font-normal text-[14px] text-black hover:text-gray-600 transition-colors">
+                  <button className="font-satoshi font-normal text-[14px] text-black hover:text-gray-600 transition-colors text-left">
                     Travel Insurance
-                  </a>
+                  </button>
                 </li>
                 <li>
-                  <a href="#" className="font-satoshi font-normal text-[14px] text-black hover:text-gray-600 transition-colors">
+                  <button className="font-satoshi font-normal text-[14px] text-black hover:text-gray-600 transition-colors text-left">
                     Cyber Insurance
-                  </a>
+                  </button>
                 </li>
                 <li>
-                  <a href="#" className="font-satoshi font-normal text-[14px] text-black hover:text-gray-600 transition-colors">
+                  <button className="font-satoshi font-normal text-[14px] text-black hover:text-gray-600 transition-colors text-left">
                     Home Insurance
-                  </a>
+                  </button>
                 </li>
               </ul>
             </div>
