@@ -306,11 +306,11 @@ const Hero: React.FC = () => {
 
   return (
     <section className="pt-4 pb-16 relative overflow-hidden">
-      <div className="flex">
-        {/* Left Content - Exact positioning from Figma */}
-        <div className="w-[408px] space-y-8">
+      <div className="flex flex-col lg:flex-row">
+        {/* Left Content - Responsive layout */}
+        <div className="w-full lg:w-[408px] space-y-6 lg:space-y-8 px-4 lg:px-0 mb-8 lg:mb-0">
           {/* Main Headline */}
-          <h1 className="font-clash-display font-semibold text-hero text-design-black leading-[0.93em]">
+          <h1 className="font-clash-display font-semibold text-4xl lg:text-hero text-design-black leading-[0.93em]">
             Insurance<br />
             Minus the<br />
             Drama
@@ -318,7 +318,7 @@ const Hero: React.FC = () => {
 
           {/* Subtitle */}
           <p 
-            className="font-satoshi font-normal text-subheading text-design-black leading-[1.16em] max-w-[408px]"
+            className="font-satoshi font-normal text-lg lg:text-subheading text-design-black leading-[1.16em] max-w-full lg:max-w-[408px]"
             style={{ marginBottom: '40px' }}
           >
             No drama, just coverage that works when life doesn't.
@@ -327,20 +327,20 @@ const Hero: React.FC = () => {
           {/* CTA Button */}
           <button 
             onClick={handleHeroBookSafetyCall}
-            className="bg-primary-blue text-button-text font-satoshi font-bold px-5 py-3.5 rounded-[10px] hover:bg-[#012E58] transition-colors"
+            className="bg-primary-blue text-button-text font-satoshi font-bold px-5 py-3.5 rounded-[10px] hover:bg-[#012E58] transition-colors w-full lg:w-auto"
           >
             Book Safety Call
           </button>
 
           {/* Description */}
-          <p className="font-satoshi font-normal text-body text-design-black leading-[1.16em] max-w-[408px]">
+          <p className="font-satoshi font-normal text-sm lg:text-body text-design-black leading-[1.16em] max-w-full lg:max-w-[408px]">
             Licensed by IRDA and trusted by more than 1 lakh customers nationwide since 2018
           </p>
         </div>
 
-        {/* Right Product Grid - Moved further right and slightly bigger */}
-        <div className="ml-[280px] relative">
-          <div className="grid grid-cols-2 gap-x-4 gap-y-4">
+        {/* Right Product Grid - Responsive grid */}
+        <div className="w-full lg:ml-[280px] relative px-4 lg:px-0">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 lg:gap-x-4 lg:gap-y-4">
             {/* Health Insurance Card */}
             <div className="relative">
               <HealthInsuranceCard onBookSafetyCall={() => handleBookSafetyCall('health')} />

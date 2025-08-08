@@ -217,3 +217,4 @@ const PrivacyPolicy: React.FC<PrivacyPolicyProps> = ({ onNavigate }) => {
 
 export default PrivacyPolicy;
 
+

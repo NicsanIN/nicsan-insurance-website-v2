@@ -36,7 +36,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-design-white">
-      <div className="max-w-[1440px] mx-auto px-10">
+      <div className="max-w-[1440px] mx-auto px-4 lg:px-10">
         <Header />
         {renderPage()}
         <Footer onNavigate={handleNavigation} />

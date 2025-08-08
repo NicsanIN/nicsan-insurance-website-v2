@@ -11,7 +11,7 @@ const HealthInsuranceCard: React.FC<HealthInsuranceCardProps> = ({ onBookSafetyC
     <div className="relative health-card-container">
       {/* Base Health Insurance Card */}
       <div 
-        className={`relative w-[300px] h-[170px] bg-light-gray rounded-[20px] p-6 health-card-base cursor-pointer ${
+        className={`relative w-full max-w-[300px] h-[170px] bg-light-gray rounded-[20px] p-4 lg:p-6 health-card-base cursor-pointer ${
           isExpanded ? 'z-20' : 'z-10'
         }`}
         onMouseEnter={() => setIsExpanded(true)}
@@ -21,11 +21,11 @@ const HealthInsuranceCard: React.FC<HealthInsuranceCardProps> = ({ onBookSafetyC
         <div className="flex justify-between items-start h-full">
           <div className="flex flex-col justify-between h-full">
             {/* Title */}
-            <h3 className="font-satoshi font-normal text-[32px] text-design-black leading-[1.16em]">
+            <h3 className="font-satoshi font-normal text-2xl lg:text-[32px] text-design-black leading-[1.16em]">
               Health
             </h3>
             {/* Description */}
-            <p className="font-satoshi font-light text-[17px] text-design-black leading-[1.16em] max-w-[150px]">
+            <p className="font-satoshi font-light text-sm lg:text-[17px] text-design-black leading-[1.16em] max-w-[150px]">
               Stay healthy,<br />stay wealthy
             </p>
           </div>
@@ -33,14 +33,14 @@ const HealthInsuranceCard: React.FC<HealthInsuranceCardProps> = ({ onBookSafetyC
           <img 
             src="/images/healthcare-icon.png" 
             alt="Healthcare Icon" 
-            className="w-[48px] h-[48px] object-contain"
+            className="w-8 h-8 lg:w-[48px] lg:h-[48px] object-contain"
           />
         </div>
       </div>
 
       {/* Expanded Content - Overlay */}
       <div 
-        className={`absolute top-0 left-0 w-[300px] bg-light-gray rounded-[20px] health-card-expanded overflow-hidden shadow-xl ${
+        className={`absolute top-0 left-0 w-full max-w-[300px] bg-light-gray rounded-[20px] health-card-expanded overflow-hidden shadow-xl ${
           isExpanded ? 'h-[364px] opacity-100 z-30' : 'h-[170px] opacity-0 pointer-events-none'
         }`}
         onMouseEnter={() => setIsExpanded(true)}
