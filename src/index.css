@@ -237,40 +237,58 @@ html, body {
 }
 
 /* ================================
-   DESKTOP-LIKE MOBILE VIEW
-   Keep exact same layout, just scale everything down
+   FORCE DESKTOP LAYOUT ON ALL DEVICES
+   Override all responsive classes to maintain desktop layout
    ================================ */
 
-/* Mobile Scaling - 768px and below */
+/* Mobile - Force Desktop Layout */
 @media (max-width: 768px) {
-  /* Scale the entire page content */
-  body {
-    zoom: 0.8;
+  /* Force desktop grid layout on mobile */
+  .grid-cols-1 {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
   }
   
-  /* Alternative scaling approach using transform */
+  .sm\\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+  
+  /* Force desktop flexbox layout */
+  .flex-col {
+    flex-direction: row !important;
+  }
+  
+  .lg\\:flex-row {
+    flex-direction: row !important;
+  }
+  
+  /* Force desktop widths */
+  .w-full {
+    width: 408px !important;
+  }
+  
+  .lg\\:w-\\[408px\\] {
+    width: 408px !important;
+  }
+  
+  /* Force desktop margins */
+  .lg\\:ml-\\[280px\\] {
+    margin-left: 280px !important;
+  }
+  
+  /* Force desktop minimum width */
+  .lg\\:min-w-\\[1200px\\] {
+    min-width: 1200px !important;
+  }
+  
+  /* Scale everything down to fit mobile */
   .max-w-\\[1440px\\] {
-    transform: scale(0.8);
+    transform: scale(0.65);
     transform-origin: top left;
-    width: 125%; /* Compensate for scaling */
+    width: 154%;
+    margin-bottom: -200px;
   }
   
-  /* Ensure no horizontal scroll */
-  html, body {
-    overflow-x: hidden !important;
-  }
-  
-  /* Keep hamburger menu for navigation */
-  .mobile-header {
-    padding: 0.75rem 1rem !important;
-    position: relative !important;
-  }
-  
-  .mobile-logo {
-    height: 36px !important;
-    width: auto !important;
-  }
-  
+  /* Hide desktop nav, show hamburger */
   .mobile-nav {
     display: none !important;
   }
@@ -278,29 +296,28 @@ html, body {
   .hamburger-menu {
     display: flex !important;
   }
+  
+  /* Ensure no horizontal scroll */
+  html, body {
+    overflow-x: hidden !important;
+  }
 }
 
-/* Smaller Mobile - 640px and below */
+/* Smaller Mobile */
 @media (max-width: 640px) {
-  body {
-    zoom: 0.7;
-  }
-  
   .max-w-\\[1440px\\] {
-    transform: scale(0.7);
-    width: 143%; /* Compensate for scaling */
+    transform: scale(0.55);
+    width: 182%;
+    margin-bottom: -300px;
   }
 }
 
-/* Extra Small Mobile - 480px and below */
+/* Extra Small Mobile */
 @media (max-width: 480px) {
-  body {
-    zoom: 0.6;
-  }
-  
   .max-w-\\[1440px\\] {
-    transform: scale(0.6);
-    width: 167%; /* Compensate for scaling */
+    transform: scale(0.45);
+    width: 222%;
+    margin-bottom: -400px;
   }
 }
 
