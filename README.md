@@ -57,8 +57,8 @@ A comprehensive insurance website built with React, TypeScript, and Tailwind CSS
 ### 1. Clone and Install
 
 ```bash
-git clone <your-repo-url>
-cd nicsan-insurance
+git clone https://github.com/NicsanIN/nicsan-insurance-website-v2.git
+cd nicsan-insurance-website-v2
 npm install
 ```
 
@@ -108,13 +108,12 @@ src/
 │   ├── AboutUs.tsx           # About Us, Core Values, and Founders Notes
 │   ├── TermsAndConditions.tsx # Terms & Conditions page
 │   ├── PrivacyPolicy.tsx     # Privacy Policy page
-│   └── insurance-cards/      # Individual insurance card components
-│       ├── LifeInsuranceCard.tsx
-│       ├── HealthInsuranceCard.tsx
-│       ├── MotorInsuranceCard.tsx
-│       ├── TravelInsuranceCard.tsx
-│       ├── CyberInsuranceCard.tsx
-│       └── HomeInsuranceCard.tsx
+│   ├── LifeInsuranceCard.tsx # Life insurance product card
+│   ├── HealthInsuranceCard.tsx # Health insurance product card
+│   ├── MotorInsuranceCard.tsx # Motor insurance product card
+│   ├── TravelInsuranceCard.tsx # Travel insurance product card
+│   ├── CyberInsuranceCard.tsx # Cyber insurance product card
+│   └── HomeInsuranceCard.tsx # Home insurance product card
 ├── services/
 │   ├── api.js               # Supabase API service
 │   └── emailService.js      # Formspree email notifications
@@ -169,10 +168,17 @@ npm run build
 ```
 
 ### Deploy Options
-- **Vercel**: Connect your GitHub repository
+- **Vercel**: Currently deployed at https://nicsan-insurance-website-62x9jd2go-nicsans-projects.vercel.app
+- **Custom Domain**: nicsanin.com (configured in Vercel)
 - **Netlify**: Drag and drop the build folder
 - **AWS S3**: Upload build files to S3 bucket
 - **Any Static Hosting**: The app is fully static after build
+
+### Current Deployment
+- **Live URL**: https://nicsan-insurance-website-62x9jd2go-nicsans-projects.vercel.app
+- **Domain**: nicsanin.com
+- **Platform**: Vercel
+- **Auto-deploy**: Connected to GitHub repository
 
 ## 📱 Responsive Design
 
