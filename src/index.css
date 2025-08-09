@@ -155,50 +155,6 @@ html, body {
   overflow-x: hidden;
 }
 
-/* ================================
-   MOBILE VIEWPORT SCALING
-   Keep laptop layout exactly the same, just scale to fit mobile
-   ================================ */
 
-/* Mobile scaling - 768px and below */
-@media (max-width: 768px) {
-  /* Scale the entire page content to fit mobile like the screenshot */
-  .max-w-\\[1440px\\] {
-    transform: scale(0.75);
-    transform-origin: top left;
-    width: 133.33%; /* 100% / 0.75 */
-  }
-  
-  body {
-    overflow-x: hidden;
-  }
-}
-
-/* Small mobile scaling - 640px and below */
-@media (max-width: 640px) {
-  .max-w-\\[1440px\\] {
-    transform: scale(0.65);
-    transform-origin: top left;
-    width: 153.85%; /* 100% / 0.65 */
-  }
-}
-
-/* Extra small mobile scaling - 480px and below */
-@media (max-width: 480px) {
-  .max-w-\\[1440px\\] {
-    transform: scale(0.55);
-    transform-origin: top left;
-    width: 181.82%; /* 100% / 0.55 */
-  }
-}
-
-/* Very small mobile scaling - 360px and below */
-@media (max-width: 360px) {
-  .max-w-\\[1440px\\] {
-    transform: scale(0.45);
-    transform-origin: top left;
-    width: 222.22%; /* 100% / 0.45 */
-  }
-}
 
  
