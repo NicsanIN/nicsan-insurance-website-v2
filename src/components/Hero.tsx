@@ -306,70 +306,71 @@ const Hero: React.FC = () => {
 
   return (
     <section className="pt-4 pb-8 md:pb-16 relative">
-      <div className="flex flex-col lg:flex-row lg:min-w-[1200px]">
-        {/* Left Content - Responsive layout */}
-        <div className="w-full lg:w-[408px] space-y-6 md:space-y-8 mb-8 lg:mb-0">
-          {/* Main Headline */}
-          <h1 className="font-clash-display font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-hero text-design-black leading-[0.93em] mobile-title">
-            Insurance<br />
-            Minus the<br />
-            Drama
-          </h1>
+      <div className="container">
+        <div className="flex flex-col lg:flex-row lg:min-w-[1200px]">
+          {/* Left Content - Text Stack */}
+          <div className="w-full lg:w-[408px] mb-8 lg:mb-0">
+            <div className="stack">
+              {/* Main Headline */}
+              <h1 className="h1 font-clash-display text-design-black">
+                Insurance<br />
+                Minus the<br />
+                Drama
+              </h1>
 
-          {/* Subtitle */}
-          <p 
-            className="font-satoshi font-normal text-lg sm:text-xl md:text-2xl lg:text-subheading text-design-black leading-[1.16em] max-w-full lg:max-w-[408px] mb-6 md:mb-10 mobile-subtitle"
-          >
-            No drama, just coverage that works when life doesn't.
-          </p>
+              {/* Subtitle */}
+              <p className="font-satoshi font-normal text-lg sm:text-xl md:text-2xl lg:text-subheading text-design-black leading-[1.16em] max-w-full lg:max-w-[408px]">
+                No drama, just coverage that works when life doesn't.
+              </p>
 
-          {/* CTA Button */}
-          <button 
-            onClick={handleHeroBookSafetyCall}
-            className="bg-primary-blue text-button-text font-satoshi font-bold px-6 py-4 md:px-5 md:py-3.5 rounded-[10px] hover:bg-[#012E58] transition-colors w-full sm:w-auto min-h-[44px] mobile-button"
-          >
-            Book Safety Call
-          </button>
+              {/* CTA Button */}
+              <button 
+                onClick={handleHeroBookSafetyCall}
+                className="button bg-primary-blue text-button-text font-satoshi font-bold rounded-[10px] hover:bg-[#012E58] transition-colors min-h-[44px]"
+              >
+                Book Safety Call
+              </button>
 
-          {/* Description */}
-          <p className="font-satoshi font-normal text-sm sm:text-base lg:text-body text-design-black leading-[1.16em] max-w-full lg:max-w-[408px]">
-            Licensed by IRDA and trusted by more than 1 lakh customers nationwide since 2018
-          </p>
-        </div>
-
-        {/* Right Product Grid - Responsive positioning */}
-        <div className="w-full lg:ml-[280px] relative">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 lg:gap-x-4 lg:gap-y-4 mobile-insurance-grid">
-            {/* Health Insurance Card */}
-            <div className="relative">
-              <HealthInsuranceCard onBookSafetyCall={() => handleBookSafetyCall('health')} />
-            </div>
-
-            {/* Life Insurance Card */}
-            <div className="relative">
-              <LifeInsuranceCard onBookSafetyCall={() => handleBookSafetyCall('life')} />
-            </div>
-
-            {/* Travel Insurance Card */}
-            <div className="relative">
-              <TravelInsuranceCard onBookSafetyCall={() => handleBookSafetyCall('travel')} />
-            </div>
-
-            {/* Motor Insurance Card */}
-            <div className="relative">
-              <MotorInsuranceCard onBookSafetyCall={() => handleBookSafetyCall('motor')} />
-            </div>
-
-            {/* Home Insurance Card */}
-            <div className="relative">
-              <HomeInsuranceCard onBookSafetyCall={() => handleBookSafetyCall('home')} />
-            </div>
-
-            {/* Cyber Insurance Card */}
-            <div className="relative">
-              <CyberInsuranceCard onBookSafetyCall={() => handleBookSafetyCall('cyber')} />
+              {/* Description */}
+              <p className="font-satoshi font-normal text-sm sm:text-base lg:text-body text-design-black leading-[1.16em] max-w-full lg:max-w-[408px]">
+                Licensed by IRDA and trusted by more than 1 lakh customers nationwide since 2018
+              </p>
             </div>
           </div>
+
+          {/* Right Product Grid - Responsive positioning */}
+          <div className="w-full lg:ml-[280px] relative">
+            <div className="grid md-2 lg-3">
+              {/* Health Insurance Card */}
+              <div className="relative">
+                <HealthInsuranceCard onBookSafetyCall={() => handleBookSafetyCall('health')} />
+              </div>
+
+              {/* Life Insurance Card */}
+              <div className="relative">
+                <LifeInsuranceCard onBookSafetyCall={() => handleBookSafetyCall('life')} />
+              </div>
+
+              {/* Travel Insurance Card */}
+              <div className="relative">
+                <TravelInsuranceCard onBookSafetyCall={() => handleBookSafetyCall('travel')} />
+              </div>
+
+              {/* Motor Insurance Card */}
+              <div className="relative">
+                <MotorInsuranceCard onBookSafetyCall={() => handleBookSafetyCall('motor')} />
+              </div>
+
+              {/* Home Insurance Card */}
+              <div className="relative">
+                <HomeInsuranceCard onBookSafetyCall={() => handleBookSafetyCall('home')} />
+              </div>
+
+              {/* Cyber Insurance Card */}
+              <div className="relative">
+                <CyberInsuranceCard onBookSafetyCall={() => handleBookSafetyCall('cyber')} />
+              </div>
+            </div>
 
           {/* Cards Section Form Overlay - Constrained within section */}
           {showForm && (

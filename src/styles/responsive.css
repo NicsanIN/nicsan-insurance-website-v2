@@ -1,0 +1,174 @@
+/* Global responsive foundation and tokens */
+:root {
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --radius: 12px;
+  --maxw: 1100px;
+  --h1: clamp(28px, 6vw, 48px);
+  --h2: clamp(20px, 4.5vw, 32px);
+  --body: clamp(14px, 3.5vw, 18px);
+}
+
+/* Prevent horizontal overflow */
+html, body {
+  overflow-x: hidden;
+}
+
+body {
+  font-size: var(--body);
+  line-height: 1.5;
+}
+
+/* Media scaling */
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Box sizing */
+* {
+  box-sizing: border-box;
+}
+
+/* Layout utilities */
+.container {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 var(--space-4);
+}
+
+.stack > * + * {
+  margin-top: var(--space-4);
+}
+
+/* Grid system */
+.grid {
+  display: grid;
+  gap: var(--space-4);
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .grid.md-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid.lg-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Card component */
+.card {
+  background: #eee;
+  border-radius: var(--radius);
+  padding: var(--space-6);
+}
+
+/* Button component */
+.button {
+  display: inline-block;
+  text-align: center;
+  border-radius: 10px;
+  padding: 0.9rem 1.1rem;
+  width: 100%;
+}
+
+@media (min-width: 480px) {
+  .button {
+    width: auto;
+  }
+}
+
+/* Typography classes */
+.h1 {
+  font-size: var(--h1);
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.h2 {
+  font-size: var(--h2);
+  font-weight: 700;
+}
+
+/* Mobile-specific overrides to match Figma design */
+@media (max-width: 768px) {
+  /* Container mobile padding */
+  .container {
+    padding: 0 27px;
+  }
+  
+  /* Hero layout mobile adjustments */
+  .lg\:flex-row {
+    flex-direction: column !important;
+  }
+  
+  .lg\:ml-\[280px\] {
+    margin-left: 0 !important;
+    width: 100% !important;
+  }
+  
+  .lg\:w-\[408px\] {
+    width: 100% !important;
+  }
+  
+  .lg\:min-w-\[1200px\] {
+    min-width: auto !important;
+  }
+  
+  /* Typography mobile adjustments */
+  .h1 {
+    font-size: 53px !important;
+  }
+  
+  /* Grid mobile adjustments */
+  .grid.md-2 {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  
+  .grid.lg-3 {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+/* Touch device support */
+@media (hover: none) and (pointer: coarse) {
+  /* Touch-specific styles for insurance cards */
+  .health-card-container,
+  .life-card-container,
+  .cyber-card-container,
+  .home-card-container,
+  .motor-card-container,
+  .travel-card-container {
+    cursor: pointer;
+  }
+  
+  /* Ensure tap targets are at least 44px */
+  .health-card-container .health-card-expanded,
+  .life-card-container .life-card-expanded,
+  .cyber-card-container .cyber-card-expanded,
+  .home-card-container .home-card-expanded,
+  .motor-card-container .motor-card-expanded,
+  .travel-card-container .travel-card-expanded {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+  
+  /* Toggle expanded state on tap for touch devices */
+  .health-card-container.touch-expanded .health-card-expanded,
+  .life-card-container.touch-expanded .life-card-expanded,
+  .cyber-card-container.touch-expanded .cyber-card-expanded,
+  .home-card-container.touch-expanded .home-card-expanded,
+  .motor-card-container.touch-expanded .motor-card-expanded,
+  .travel-card-container.touch-expanded .travel-card-expanded {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}

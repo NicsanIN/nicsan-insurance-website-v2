@@ -5,6 +5,7 @@ import AboutUs from './components/AboutUs';
 import Footer from './components/Footer';
 import TermsAndConditions from './components/TermsAndConditions';
 import PrivacyPolicy from './components/PrivacyPolicy';
+import './styles/responsive.css';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
