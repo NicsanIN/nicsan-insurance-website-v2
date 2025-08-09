@@ -237,30 +237,76 @@ html, body {
 }
 
 /* ================================
-   SIMPLE MOBILE SCALING
-   Just scale the entire page - no layout changes
+   MOBILE = DESKTOP VIEW (SCALED DOWN)
+   Disable all responsive behavior and zoom out
    ================================ */
 
 @media (max-width: 768px) {
-  /* Set viewport to desktop width and scale down */
-  html {
-    width: 1440px;
-    transform: scale(0.5);
-    transform-origin: 0 0;
-  }
-  
+  /* Zoom out the entire page */
   body {
-    width: 1440px;
-    overflow-x: hidden;
+    zoom: 0.5;
+    min-width: 1440px;
   }
   
-  /* Only change navigation for mobile usability */
+  /* Disable ALL responsive grid behavior */
+  .grid-cols-1 {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+  
+  .sm\\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+  
+  /* Disable responsive flex behavior */
+  .flex-col {
+    flex-direction: row !important;
+  }
+  
+  .lg\\:flex-row {
+    flex-direction: row !important;
+  }
+  
+  /* Force desktop widths */
+  .w-full {
+    width: auto !important;
+  }
+  
+  .lg\\:w-\\[408px\\] {
+    width: 408px !important;
+  }
+  
+  .lg\\:ml-\\[280px\\] {
+    margin-left: 280px !important;
+  }
+  
+  .lg\\:min-w-\\[1200px\\] {
+    min-width: 1200px !important;
+  }
+  
+  /* Navigation changes only */
   .mobile-nav {
     display: none !important;
   }
   
   .hamburger-menu {
     display: flex !important;
+  }
+  
+  /* Prevent horizontal scroll */
+  html, body {
+    overflow-x: hidden !important;
+  }
+}
+
+@media (max-width: 640px) {
+  body {
+    zoom: 0.4;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    zoom: 0.35;
   }
 }
 
