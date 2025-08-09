@@ -198,17 +198,11 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             {/* Left Section - Company Info Only */}
             <div className="flex flex-col items-start space-y-2">
               <p className="font-satoshi font-normal text-[12px] text-black">
-                Nicsan © 2021-2025. All Rights Reserved.
-              </p>
-              <p className="font-satoshi font-normal text-[12px] text-black">
                 Nicsan Insurance Marketing LLP
               </p>
               <p className="font-satoshi font-normal text-[12px] text-black">
-                CIN: U74999KA2018PTC184423
-              </p>
-              <p className="font-satoshi font-normal text-[12px] text-black">
                 IRDAI Registered Corporate Agent (Composite) License No{' '}
-                <span className="underline">CA0738</span> valid till 9th December 2026
+                <span className="underline">IMF07410120240646</span> valid till 9th December 2026
               </p>
             </div>
 
