@@ -80,64 +80,64 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
   };
 
   return (
-    <footer className="bg-white text-black py-12 mt-16">
-      <div className="max-w-[1440px] mx-auto px-10">
-        {/* Top Band */}
-        <div className="flex justify-between items-start mb-8">
+    <footer className="bg-white text-black py-8 sm:py-12 mt-12 sm:mt-16">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10">
+        {/* Top Band - Enhanced for mobile */}
+        <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start mb-6 sm:mb-8 space-y-6 lg:space-y-0">
           {/* Left Section - Logo and Button */}
-          <div className="flex flex-col items-start space-y-4">
+          <div className="flex flex-col items-start space-y-3 sm:space-y-4">
             {/* Logo */}
             <div className="flex items-center">
               <img 
                 src="/images/logo-horizontal.png" 
                 alt="Nicsan Insurance" 
-                className="h-8 object-contain"
+                className="h-6 sm:h-8 object-contain"
               />
             </div>
-            {/* Button */}
+            {/* Button - Enhanced for mobile */}
             <button 
               onClick={handleBookSafetyCall}
-              className="bg-primary-blue text-white font-satoshi font-bold px-6 py-3 rounded-lg hover:bg-[#012E58] transition-colors"
+              className="bg-primary-blue text-white font-satoshi font-bold px-4 py-3 sm:px-6 sm:py-3 rounded-lg hover:bg-[#012E58] active:bg-[#012E58] transition-colors text-sm sm:text-base touch-manipulation w-full sm:w-auto"
             >
               Book Safety Call
             </button>
           </div>
 
-          {/* Right Section - Three Columns */}
-          <div className="flex gap-16">
+          {/* Right Section - Mobile responsive columns */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 lg:gap-16 w-full lg:w-auto">
             {/* Products Column */}
             <div>
-              <h4 className="font-satoshi font-bold text-[16px] text-black mb-4">
+              <h4 className="font-satoshi font-bold text-sm sm:text-[16px] text-black mb-3 sm:mb-4">
                 Products
               </h4>
-              <ul className="space-y-2">
+              <ul className="space-y-1.5 sm:space-y-2">
                 <li>
-                  <button className="font-satoshi font-normal text-[14px] text-black hover:text-gray-600 transition-colors text-left">
+                  <button className="font-satoshi font-normal text-xs sm:text-[14px] text-black hover:text-gray-600 active:text-gray-700 transition-colors text-left touch-manipulation">
                     Health Insurance
                   </button>
                 </li>
                 <li>
-                  <button className="font-satoshi font-normal text-[14px] text-black hover:text-gray-600 transition-colors text-left">
+                  <button className="font-satoshi font-normal text-xs sm:text-[14px] text-black hover:text-gray-600 active:text-gray-700 transition-colors text-left touch-manipulation">
                     Life Insurance
                   </button>
                 </li>
                 <li>
-                  <button className="font-satoshi font-normal text-[14px] text-black hover:text-gray-600 transition-colors text-left">
+                  <button className="font-satoshi font-normal text-xs sm:text-[14px] text-black hover:text-gray-600 active:text-gray-700 transition-colors text-left touch-manipulation">
                     Motor Insurance
                   </button>
                 </li>
                 <li>
-                  <button className="font-satoshi font-normal text-[14px] text-black hover:text-gray-600 transition-colors text-left">
+                  <button className="font-satoshi font-normal text-xs sm:text-[14px] text-black hover:text-gray-600 active:text-gray-700 transition-colors text-left touch-manipulation">
                     Travel Insurance
                   </button>
                 </li>
                 <li>
-                  <button className="font-satoshi font-normal text-[14px] text-black hover:text-gray-600 transition-colors text-left">
+                  <button className="font-satoshi font-normal text-xs sm:text-[14px] text-black hover:text-gray-600 active:text-gray-700 transition-colors text-left touch-manipulation">
                     Cyber Insurance
                   </button>
                 </li>
                 <li>
-                  <button className="font-satoshi font-normal text-[14px] text-black hover:text-gray-600 transition-colors text-left">
+                  <button className="font-satoshi font-normal text-xs sm:text-[14px] text-black hover:text-gray-600 active:text-gray-700 transition-colors text-left touch-manipulation">
                     Home Insurance
                   </button>
                 </li>
@@ -146,14 +146,14 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
 
             {/* General Column */}
             <div>
-              <h4 className="font-satoshi font-bold text-[16px] text-black mb-4">
+              <h4 className="font-satoshi font-bold text-sm sm:text-[16px] text-black mb-3 sm:mb-4">
                 General
               </h4>
-              <ul className="space-y-2">
+              <ul className="space-y-1.5 sm:space-y-2">
                 <li>
                   <button 
                     onClick={handleTermsClick}
-                    className="font-satoshi font-normal text-[14px] text-black hover:text-gray-600 transition-colors text-left"
+                    className="font-satoshi font-normal text-xs sm:text-[14px] text-black hover:text-gray-600 active:text-gray-700 transition-colors text-left touch-manipulation"
                   >
                     Terms & Conditions
                   </button>
@@ -161,7 +161,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                 <li>
                   <button 
                     onClick={handlePrivacyClick}
-                    className="font-satoshi font-normal text-[14px] text-black hover:text-gray-600 transition-colors text-left"
+                    className="font-satoshi font-normal text-xs sm:text-[14px] text-black hover:text-gray-600 active:text-gray-700 transition-colors text-left touch-manipulation"
                   >
                     Privacy Policy
                   </button>
@@ -172,17 +172,17 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
 
             {/* Need Help? Column */}
             <div>
-              <h4 className="font-satoshi font-bold text-[16px] text-black mb-4">
+              <h4 className="font-satoshi font-bold text-sm sm:text-[16px] text-black mb-3 sm:mb-4">
                 Need Help?
               </h4>
-              <div className="space-y-2">
+              <div className="space-y-1.5 sm:space-y-2">
                 <div>
-                  <p className="font-satoshi font-normal text-[14px] text-black">
+                  <p className="font-satoshi font-normal text-xs sm:text-[14px] text-black break-all sm:break-normal">
                     General Support: care@nicsanimf.com
                   </p>
                 </div>
                 <div>
-                  <p className="font-satoshi font-normal text-[14px] text-black">
+                  <p className="font-satoshi font-normal text-xs sm:text-[14px] text-black break-all sm:break-normal">
                     Hiring Queries: connect@nicsanimf.com
                   </p>
                 </div>
@@ -192,29 +192,29 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           </div>
         </div>
 
-        {/* Bottom Band - Copyright and Disclaimer */}
-        <div className="border-t border-gray-200 pt-8">
-          <div className="flex justify-between items-start">
-            {/* Left Section - Company Info Only */}
-            <div className="flex flex-col items-start space-y-2">
-              <p className="font-satoshi font-normal text-[12px] text-black">
+        {/* Bottom Band - Mobile responsive */}
+        <div className="border-t border-gray-200 pt-6 sm:pt-8">
+          <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start space-y-4 lg:space-y-0">
+            {/* Left Section - Company Info */}
+            <div className="flex flex-col items-start space-y-1.5 sm:space-y-2">
+              <p className="font-satoshi font-normal text-[10px] sm:text-[12px] text-black">
                 Nicsan © 2021-2025. All Rights Reserved.
               </p>
-              <p className="font-satoshi font-normal text-[12px] text-black">
+              <p className="font-satoshi font-normal text-[10px] sm:text-[12px] text-black">
                 Nicsan Insurance Marketing LLP
               </p>
-              <p className="font-satoshi font-normal text-[12px] text-black">
+              <p className="font-satoshi font-normal text-[10px] sm:text-[12px] text-black">
                 CIN: U74999KA2018PTC184423
               </p>
-              <p className="font-satoshi font-normal text-[12px] text-black">
+              <p className="font-satoshi font-normal text-[10px] sm:text-[12px] text-black">
                 IRDAI Registered Corporate Agent (Composite) License No{' '}
                 <span className="underline">CA0738</span> valid till 9th December 2026
               </p>
             </div>
 
             {/* Right Section - Disclaimer */}
-            <div className="max-w-2xl">
-              <p className="font-satoshi font-normal text-[12px] text-black leading-relaxed">
+            <div className="max-w-full lg:max-w-2xl">
+              <p className="font-satoshi font-normal text-[10px] sm:text-[12px] text-black leading-relaxed">
                 Disclaimer : The information contained in this website is presented purely for information purposes only provided as service to the internet community at large. It does not constitute insurance advice and we do not guarantee the accuracy, adequacy or the completeness of the information contained here.
               </p>
             </div>

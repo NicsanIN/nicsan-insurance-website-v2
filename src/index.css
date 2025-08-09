@@ -13,6 +13,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #FFFFFF;
+  /* Enhanced mobile support */
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 
 code {
@@ -20,9 +24,15 @@ code {
     monospace;
 }
 
-/* Custom scrollbar */
+/* Custom scrollbar - Enhanced for mobile */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
+}
+
+@media (min-width: 640px) {
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
 }
 
 ::-webkit-scrollbar-track {
@@ -36,6 +46,29 @@ code {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #a8a8a8;
+}
+
+/* Mobile-specific utilities */
+@media (max-width: 640px) {
+  .touch-manipulation {
+    touch-action: manipulation;
+  }
+  
+  /* Prevent text selection on buttons */
+  button, .button {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Better tap targets */
+  a, button, [role="button"] {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 /* Life Insurance Card Hover Effects */
@@ -98,39 +131,104 @@ code {
   transition: z-index 0.1s ease;
 }
 
-/* Form input focus states */
-.life-card-input:focus {
+/* Enhanced form input focus states */
+.life-card-input:focus,
+input:focus,
+textarea:focus {
   box-shadow: 0 0 0 2px rgba(0, 78, 152, 0.2);
   outline: none;
+  transform: scale(1.01);
+  transition: all 0.2s ease;
 }
 
-/* Smooth hover transitions */
-.life-card-container:hover .life-card-expanded {
-  opacity: 1;
-  pointer-events: auto;
+/* Mobile form enhancements */
+@media (max-width: 640px) {
+  input, textarea {
+    border-radius: 8px;
+    padding: 12px 16px;
+    background-color: #ffffff;
+    border: 1px solid #d1d5db;
+  }
+  
+  input:focus, textarea:focus {
+    border-color: #004E98;
+    box-shadow: 0 0 0 3px rgba(0, 78, 152, 0.1);
+    transform: none; /* Remove scale on mobile for better UX */
+  }
 }
 
-.health-card-container:hover .health-card-expanded {
-  opacity: 1;
-  pointer-events: auto;
+/* Smooth hover transitions - Desktop only */
+@media (hover: hover) {
+  .life-card-container:hover .life-card-expanded {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .health-card-container:hover .health-card-expanded {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .cyber-card-container:hover .cyber-card-expanded {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .home-card-container:hover .home-card-expanded {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .motor-card-container:hover .motor-card-expanded {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .travel-card-container:hover .travel-card-expanded {
+    opacity: 1;
+    pointer-events: auto;
+  }
 }
 
-.cyber-card-container:hover .cyber-card-expanded {
-  opacity: 1;
-  pointer-events: auto;
+/* Mobile touch interactions */
+@media (hover: none) {
+  .life-card-container .life-card-expanded,
+  .health-card-container .health-card-expanded,
+  .cyber-card-container .cyber-card-expanded,
+  .home-card-container .home-card-expanded,
+  .motor-card-container .motor-card-expanded,
+  .travel-card-container .travel-card-expanded {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
 }
 
-.home-card-container:hover .home-card-expanded {
-  opacity: 1;
-  pointer-events: auto;
+/* Enhanced mobile scrolling */
+@media (max-width: 1024px) {
+  * {
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  /* Prevent zoom on input focus */
+  input, select, textarea {
+    font-size: 16px;
+  }
+  
+  /* Better button touch targets */
+  button {
+    min-height: 44px;
+    min-width: 44px;
+  }
 }
 
-.motor-card-container:hover .motor-card-expanded {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.travel-card-container:hover .travel-card-expanded {
-  opacity: 1;
-  pointer-events: auto;
+/* Mobile-specific animations */
+@media (max-width: 640px) {
+  .life-card-expanded,
+  .health-card-expanded,
+  .cyber-card-expanded,
+  .home-card-expanded,
+  .motor-card-expanded,
+  .travel-card-expanded {
+    transition: height 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+                opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
 } 

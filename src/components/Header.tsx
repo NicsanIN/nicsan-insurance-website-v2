@@ -65,39 +65,39 @@ const Header: React.FC = () => {
 
   return (
     <>
-      <header className="flex justify-between items-center py-4 lg:py-8 px-4 lg:px-0">
-        {/* Logo */}
+      <header className="flex justify-between items-center py-3 sm:py-4 lg:py-8 px-4 lg:px-0">
+        {/* Logo - Enhanced for mobile */}
         <div className="flex items-center">
           <img 
             src="/images/logo-favicon.png" 
             alt="Nicsan Insurance" 
-            className="w-12 h-9 lg:w-[71px] lg:h-[52px]"
+            className="w-10 h-7 sm:w-12 sm:h-9 lg:w-[71px] lg:h-[52px]"
           />
         </div>
 
-        {/* Navigation */}
-        <div className="flex items-center gap-4 lg:gap-9">
+        {/* Navigation - Enhanced for mobile */}
+        <div className="flex items-center gap-3 sm:gap-4 lg:gap-9">
           {/* Products Dropdown */}
           
 
-          {/* Book Safety Call Button */}
+          {/* Book Safety Call Button - Enhanced for mobile */}
           <button 
             onClick={handleBookSafetyCall}
-            className="bg-primary-blue text-button-text font-satoshi font-bold px-3 py-2 lg:px-5 lg:py-3.5 rounded-[10px] hover:bg-[#012E58] transition-colors text-sm lg:text-base"
+            className="bg-primary-blue text-button-text font-satoshi font-bold px-3 py-2.5 sm:px-3 sm:py-2 lg:px-5 lg:py-3.5 rounded-[8px] sm:rounded-[10px] hover:bg-[#012E58] active:bg-[#012E58] transition-colors text-xs sm:text-sm lg:text-base shadow-md active:shadow-sm touch-manipulation"
           >
             Book Safety Call
           </button>
         </div>
       </header>
 
-      {/* Form Overlay */}
+      {/* Form Overlay - Enhanced for mobile */}
       {showForm && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center">
-          <div className="bg-light-gray p-6 w-full max-w-md rounded-[24px] overflow-hidden relative">
-            {/* X Close Button */}
+        <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+          <div className="bg-light-gray p-4 sm:p-6 w-full max-w-md rounded-[20px] sm:rounded-[24px] overflow-hidden relative">
+            {/* X Close Button - Enhanced for mobile */}
             <button 
               onClick={handleCloseForm}
-              className="absolute top-4 right-4 w-8 h-8 bg-gray-300 rounded-full flex items-center justify-center hover:bg-gray-400 transition-colors z-10"
+              className="absolute top-3 right-3 sm:top-4 sm:right-4 w-9 h-9 sm:w-8 sm:h-8 bg-gray-300 rounded-full flex items-center justify-center hover:bg-gray-400 active:bg-gray-500 transition-colors z-10 touch-manipulation"
             >
               <svg className="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -163,9 +163,9 @@ const Header: React.FC = () => {
               </div>
             ) : (
               <>
-                {/* Form Header */}
-                <div className="flex justify-between items-start mb-4">
-                  <h3 className="font-satoshi font-normal text-[28px] text-design-black leading-[1.16em]">
+                {/* Form Header - Mobile optimized */}
+                <div className="flex justify-between items-start mb-3 sm:mb-4">
+                  <h3 className="font-satoshi font-normal text-xl sm:text-2xl lg:text-[28px] text-design-black leading-[1.16em]">
                     Book Safety Call
                   </h3>
                 </div>
@@ -200,20 +200,20 @@ const Header: React.FC = () => {
                     />
                   </div>
 
-                  {/* Form Buttons */}
-                  <div className="flex gap-3 pt-4">
+                  {/* Form Buttons - Enhanced for mobile */}
+                  <div className="flex gap-2 sm:gap-3 pt-3 sm:pt-4">
                     <button 
                       type="button"
                       onClick={handleCloseForm}
                       disabled={submitting}
-                      className="flex-1 text-design-black font-satoshi font-bold px-4 py-3 rounded-[10px] border-2 border-design-black hover:bg-gray-100 transition-colors text-[15px] disabled:opacity-50"
+                      className="flex-1 text-design-black font-satoshi font-bold px-3 py-3 sm:px-4 sm:py-3 rounded-[8px] sm:rounded-[10px] border-2 border-design-black hover:bg-gray-100 active:bg-gray-200 transition-colors text-sm sm:text-[15px] disabled:opacity-50 touch-manipulation"
                     >
                       Cancel
                     </button>
                     <button 
                       type="submit"
                       disabled={submitting}
-                      className="flex-1 bg-primary-blue text-button-text font-satoshi font-bold px-4 py-3 rounded-[10px] hover:bg-[#012E58] transition-colors text-[15px] shadow-md disabled:opacity-50"
+                      className="flex-1 bg-primary-blue text-button-text font-satoshi font-bold px-3 py-3 sm:px-4 sm:py-3 rounded-[8px] sm:rounded-[10px] hover:bg-[#012E58] active:bg-[#012E58] transition-colors text-sm sm:text-[15px] shadow-md active:shadow-sm disabled:opacity-50 touch-manipulation"
                     >
                       {submitting ? 'Submitting...' : 'Schedule Safety Call'}
                     </button>
