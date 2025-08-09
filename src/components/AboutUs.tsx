@@ -65,124 +65,126 @@ const AboutUs: React.FC = () => {
 
   return (
     <section className="pt-8 pb-16">
-      {/* About Us Section */}
-      <div className="flex justify-between items-start mb-8">
-        {/* Left side: About Us heading */}
-        <div className="flex-shrink-0">
-          <h2 className="font-clash-display font-semibold text-section-heading text-design-black leading-[0.93em]">
-            About Us
+      <div className="container">
+        {/* About Us Section */}
+        <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start mb-8 space-y-6 lg:space-y-0">
+          {/* Left side: About Us heading */}
+          <div className="flex-shrink-0">
+            <h2 className="h2 font-clash-display text-design-black">
+              About Us
+            </h2>
+          </div>
+          
+          {/* Middle: Description text */}
+          <div className="max-w-[440px] lg:mx-8">
+            <p className="font-satoshi font-normal text-lg md:text-[28px] text-design-black leading-[1.16em]">
+              Nicsan Insurance is an Organically grown business by two simple people from simple beginnings.
+            </p>
+          </div>
+          
+          {/* Right side: Logo */}
+          <div className="flex-shrink-0">
+            <img 
+              src="/images/logo-horizontal.png" 
+              alt="Nicsan Insurance" 
+              className="w-[180px] md:w-[235px] h-auto max-w-[120px] md:max-w-none"
+            />
+          </div>
+        </div>
+
+        {/* Core Values Section */}
+        <div className="mb-6">
+          <h2 className="h2 font-satoshi text-design-black">
+            Core Values
           </h2>
         </div>
         
-        {/* Middle: Description text */}
-        <div className="max-w-[440px] mx-8">
-          <p className="font-satoshi font-normal text-[28px] text-design-black leading-[1.16em]">
-            Nicsan Insurance is an Organically grown business by two simple people from simple beginnings.
-          </p>
-        </div>
-        
-        {/* Right side: Logo */}
-        <div className="flex-shrink-0">
-          <img 
-            src="/images/logo-horizontal.png" 
-            alt="Nicsan Insurance" 
-            className="w-[235px] h-[43px]"
-          />
-        </div>
-      </div>
+        <div className="grid md-2 lg-3 mb-8">
+          {/* Card 1: Demystifying */}
+          <div className="card bg-light-gray rounded-[20px] p-6 md:p-8 flex flex-col justify-between relative min-h-[180px]">
+            <h3 className="font-satoshi font-normal text-xl md:text-[24px] text-design-black leading-[1.16em]">
+              Demystifying
+            </h3>
+            {/* Icon in bottom right */}
+            <div className="absolute bottom-4 md:bottom-6 right-4 md:right-6">
+              <img 
+                src="/images/honest.png" 
+                alt="Demystifying Icon" 
+                className="w-10 h-10 md:w-12 md:h-12 object-contain"
+              />
+            </div>
+          </div>
 
-      {/* Core Values Section */}
-      <div className="mb-4">
-        <h2 className="font-satoshi font-normal text-[32px] text-design-black leading-[1.16em]">
-          Core Values
-        </h2>
-      </div>
-      
-      <div className="flex gap-8 mb-8">
-        {/* Card 1: Demystifying */}
-        <div className="w-[280px] h-[180px] bg-light-gray rounded-[20px] p-8 flex flex-col justify-between relative">
-          <h3 className="font-satoshi font-normal text-[24px] text-design-black leading-[1.16em]">
-            Demystifying
-          </h3>
-          {/* Icon in bottom right */}
-          <div className="absolute bottom-6 right-6">
-            <img 
-              src="/images/honest.png" 
-              alt="Demystifying Icon" 
-              className="w-12 h-12 object-contain"
-            />
+          {/* Card 2: Complexity, Simplified */}
+          <div className="card bg-light-gray rounded-[20px] p-6 md:p-8 flex flex-col justify-between relative min-h-[180px]">
+            <h3 className="font-satoshi font-normal text-xl md:text-[24px] text-design-black leading-[1.16em]">
+              Complexity, Simplified
+            </h3>
+            {/* Icon in bottom right */}
+            <div className="absolute bottom-4 md:bottom-6 right-4 md:right-6">
+              <img 
+                src="/images/simplify.png" 
+                alt="Complexity Simplified Icon" 
+                className="w-10 h-10 md:w-12 md:h-12 object-contain"
+              />
+            </div>
+          </div>
+
+          {/* Card 3: Need based approach */}
+          <div className="card bg-light-gray rounded-[20px] p-6 md:p-8 flex flex-col justify-between relative min-h-[180px]">
+            <h3 className="font-satoshi font-normal text-xl md:text-[24px] text-design-black leading-[1.16em]">
+              Need based approach
+            </h3>
+            {/* Icon in bottom right */}
+            <div className="absolute bottom-4 md:bottom-6 right-4 md:right-6">
+              <img 
+                src="/images/target-audience.png" 
+                alt="Need Based Approach Icon" 
+                className="w-10 h-10 md:w-12 md:h-12 object-contain"
+              />
+            </div>
           </div>
         </div>
 
-        {/* Card 2: Complexity, Simplified */}
-        <div className="w-[280px] h-[180px] bg-light-gray rounded-[20px] p-8 flex flex-col justify-between relative">
-          <h3 className="font-satoshi font-normal text-[24px] text-design-black leading-[1.16em]">
-            Complexity, Simplified
-          </h3>
-          {/* Icon in bottom right */}
-          <div className="absolute bottom-6 right-6">
-            <img 
-              src="/images/simplify.png" 
-              alt="Complexity Simplified Icon" 
-              className="w-12 h-12 object-contain"
-            />
-          </div>
+        {/* Founders Notes Section */}
+        <div className="mb-6">
+          <h2 className="h2 font-satoshi text-design-black">
+            Founders Notes
+          </h2>
         </div>
 
-        {/* Card 3: Need based approach */}
-        <div className="w-[280px] h-[180px] bg-light-gray rounded-[20px] p-8 flex flex-col justify-between relative">
-          <h3 className="font-satoshi font-normal text-[24px] text-design-black leading-[1.16em]">
-            Need based approach
-          </h3>
-          {/* Icon in bottom right */}
-          <div className="absolute bottom-6 right-6">
-            <img 
-              src="/images/target-audience.png" 
-              alt="Need Based Approach Icon" 
-              className="w-12 h-12 object-contain"
-            />
-          </div>
-        </div>
-      </div>
+        <div className="flex flex-col lg:flex-row gap-6 lg:gap-8 items-start">
+          <div className="grid md-2 gap-6 lg:gap-8 flex-1">
+            {/* Founder Card 1: Sandeep Kumar */}
+            <div className="card bg-light-gray rounded-[20px] p-6 md:p-8 flex flex-col justify-between min-h-[200px] md:min-h-[220px]">
+              <p className="font-satoshi font-normal text-lg md:text-[24px] text-design-black leading-[1.16em]">
+                Paying insurance isn't the problem, it's the solution.
+              </p>
+              <p className="font-satoshi font-normal text-base md:text-[18px] text-design-black leading-[1.16em] mt-4">
+                -Sandeep Kumar
+              </p>
+            </div>
 
-      {/* Founders Notes Section */}
-      <div className="mb-4">
-        <h2 className="font-satoshi font-normal text-[32px] text-design-black leading-[1.16em]">
-          Founders Notes
-        </h2>
-      </div>
-
-      <div className="flex gap-8 items-start">
-        <div className="flex gap-8">
-          {/* Founder Card 1: Sandeep Kumar */}
-          <div className="w-[440px] h-[220px] bg-light-gray rounded-[20px] p-8 flex flex-col justify-between">
-            <p className="font-satoshi font-normal text-[24px] text-design-black leading-[1.16em]">
-              Paying insurance isn't the problem, it's the solution.
-            </p>
-            <p className="font-satoshi font-normal text-[18px] text-design-black leading-[1.16em]">
-              -Sandeep Kumar
-            </p>
+            {/* Founder Card 2: Koustav Bhattacharjee */}
+            <div className="card bg-light-gray rounded-[20px] p-6 md:p-8 flex flex-col justify-between min-h-[200px] md:min-h-[220px]">
+              <p className="font-satoshi font-normal text-lg md:text-[24px] text-design-black leading-[1.16em]">
+              It is the coverages that matter at the time of claim, not the premium you have paid.
+              </p>
+              <p className="font-satoshi font-normal text-base md:text-[18px] text-design-black leading-[1.16em] mt-4">
+                -Koustav Bhattacharjee
+              </p>
+            </div>
           </div>
 
-          {/* Founder Card 2: Koustav Bhattacharjee */}
-          <div className="w-[440px] h-[220px] bg-light-gray rounded-[20px] p-8 flex flex-col justify-between">
-            <p className="font-satoshi font-normal text-[24px] text-design-black leading-[1.16em]">
-            It is the coverages that matter at the time of claim, not the premium you have paid.
-            </p>
-            <p className="font-satoshi font-normal text-[18px] text-design-black leading-[1.16em]">
-              -Koustav Bhattacharjee
-            </p>
+          {/* CTA Button */}
+          <div className="flex-shrink-0 w-full lg:w-auto">
+            <button 
+              onClick={handleBookSafetyCall}
+              className="button bg-primary-blue text-button-text font-satoshi font-bold rounded-[12px] hover:bg-[#012E58] transition-colors min-h-[44px]"
+            >
+              Book Safety Call
+            </button>
           </div>
-        </div>
-
-        {/* CTA Button */}
-        <div className="flex-shrink-0">
-          <button 
-            onClick={handleBookSafetyCall}
-            className="bg-primary-blue text-button-text font-satoshi font-bold px-6 py-4 rounded-[12px] hover:bg-[#012E58] transition-colors"
-          >
-            Book Safety Call
-          </button>
         </div>
       </div>
 

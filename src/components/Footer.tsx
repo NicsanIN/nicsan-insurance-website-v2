@@ -81,9 +81,9 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
 
   return (
     <footer className="bg-white text-black py-12 mt-16">
-      <div className="max-w-[1440px] mx-auto px-10">
+      <div className="container">
         {/* Top Band */}
-        <div className="flex justify-between items-start mb-8">
+        <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start mb-8 space-y-8 lg:space-y-0">
           {/* Left Section - Logo and Button */}
           <div className="flex flex-col items-start space-y-4">
             {/* Logo */}
@@ -91,53 +91,53 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               <img 
                 src="/images/logo-horizontal.png" 
                 alt="Nicsan Insurance" 
-                className="h-8 object-contain"
+                className="h-6 md:h-8 object-contain max-w-[120px]"
               />
             </div>
             {/* Button */}
             <button 
               onClick={handleBookSafetyCall}
-              className="bg-primary-blue text-white font-satoshi font-bold px-6 py-3 rounded-lg hover:bg-[#012E58] transition-colors"
+              className="button bg-primary-blue text-white font-satoshi font-bold rounded-lg hover:bg-[#012E58] transition-colors min-h-[44px]"
             >
               Book Safety Call
             </button>
           </div>
 
           {/* Right Section - Three Columns */}
-          <div className="flex gap-16">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 lg:gap-16">
             {/* Products Column */}
             <div>
-              <h4 className="font-satoshi font-bold text-[16px] text-black mb-4">
+              <h4 className="font-satoshi font-bold text-base text-black mb-4">
                 Products
               </h4>
               <ul className="space-y-2">
                 <li>
-                  <button className="font-satoshi font-normal text-[14px] text-black hover:text-gray-600 transition-colors text-left">
+                  <button className="font-satoshi font-normal text-sm text-black hover:text-gray-600 transition-colors text-left">
                     Health Insurance
                   </button>
                 </li>
                 <li>
-                  <button className="font-satoshi font-normal text-[14px] text-black hover:text-gray-600 transition-colors text-left">
+                  <button className="font-satoshi font-normal text-sm text-black hover:text-gray-600 transition-colors text-left">
                     Life Insurance
                   </button>
                 </li>
                 <li>
-                  <button className="font-satoshi font-normal text-[14px] text-black hover:text-gray-600 transition-colors text-left">
+                  <button className="font-satoshi font-normal text-sm text-black hover:text-gray-600 transition-colors text-left">
                     Motor Insurance
                   </button>
                 </li>
                 <li>
-                  <button className="font-satoshi font-normal text-[14px] text-black hover:text-gray-600 transition-colors text-left">
+                  <button className="font-satoshi font-normal text-sm text-black hover:text-gray-600 transition-colors text-left">
                     Travel Insurance
                   </button>
                 </li>
                 <li>
-                  <button className="font-satoshi font-normal text-[14px] text-black hover:text-gray-600 transition-colors text-left">
+                  <button className="font-satoshi font-normal text-sm text-black hover:text-gray-600 transition-colors text-left">
                     Cyber Insurance
                   </button>
                 </li>
                 <li>
-                  <button className="font-satoshi font-normal text-[14px] text-black hover:text-gray-600 transition-colors text-left">
+                  <button className="font-satoshi font-normal text-sm text-black hover:text-gray-600 transition-colors text-left">
                     Home Insurance
                   </button>
                 </li>
@@ -146,14 +146,14 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
 
             {/* General Column */}
             <div>
-              <h4 className="font-satoshi font-bold text-[16px] text-black mb-4">
+              <h4 className="font-satoshi font-bold text-base text-black mb-4">
                 General
               </h4>
               <ul className="space-y-2">
                 <li>
                   <button 
                     onClick={handleTermsClick}
-                    className="font-satoshi font-normal text-[14px] text-black hover:text-gray-600 transition-colors text-left"
+                    className="font-satoshi font-normal text-sm text-black hover:text-gray-600 transition-colors text-left"
                   >
                     Terms & Conditions
                   </button>
@@ -161,32 +161,30 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                 <li>
                   <button 
                     onClick={handlePrivacyClick}
-                    className="font-satoshi font-normal text-[14px] text-black hover:text-gray-600 transition-colors text-left"
+                    className="font-satoshi font-normal text-sm text-black hover:text-gray-600 transition-colors text-left"
                   >
                     Privacy Policy
                   </button>
                 </li>
-                
               </ul>
             </div>
 
             {/* Need Help? Column */}
             <div>
-              <h4 className="font-satoshi font-bold text-[16px] text-black mb-4">
+              <h4 className="font-satoshi font-bold text-base text-black mb-4">
                 Need Help?
               </h4>
               <div className="space-y-2">
                 <div>
-                  <p className="font-satoshi font-normal text-[14px] text-black">
+                  <p className="font-satoshi font-normal text-sm text-black break-words">
                     General Support: care@nicsanimf.com
                   </p>
                 </div>
                 <div>
-                  <p className="font-satoshi font-normal text-[14px] text-black">
+                  <p className="font-satoshi font-normal text-sm text-black break-words">
                     Hiring Queries: connect@nicsanimf.com
                   </p>
                 </div>
-                
               </div>
             </div>
           </div>
@@ -194,13 +192,13 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
 
         {/* Bottom Band - Copyright and Disclaimer */}
         <div className="border-t border-gray-200 pt-8">
-          <div className="flex justify-between items-start">
+          <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start space-y-4 lg:space-y-0">
             {/* Left Section - Company Info Only */}
             <div className="flex flex-col items-start space-y-2">
-              <p className="font-satoshi font-normal text-[12px] text-black">
+              <p className="font-satoshi font-normal text-xs text-black">
                 Nicsan Insurance Marketing LLP
               </p>
-              <p className="font-satoshi font-normal text-[12px] text-black">
+              <p className="font-satoshi font-normal text-xs text-black">
                 IRDAI Registered Corporate Agent (Composite) License No{' '}
                 <span className="underline">IMF07410120240646</span> valid till 9th December 2026
               </p>
@@ -208,7 +206,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
 
             {/* Right Section - Disclaimer */}
             <div className="max-w-2xl">
-              <p className="font-satoshi font-normal text-[12px] text-black leading-relaxed">
+              <p className="font-satoshi font-normal text-xs text-black leading-relaxed">
                 Disclaimer : The information contained in this website is presented purely for information purposes only provided as service to the internet community at large. It does not constitute insurance advice and we do not guarantee the accuracy, adequacy or the completeness of the information contained here.
               </p>
             </div>

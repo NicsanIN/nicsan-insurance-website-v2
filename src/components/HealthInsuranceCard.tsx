@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useTouchSupport } from '../utils/touchHandlers';
 
 interface HealthInsuranceCardProps {
   onBookSafetyCall: () => void;
@@ -6,16 +7,18 @@ interface HealthInsuranceCardProps {
 
 const HealthInsuranceCard: React.FC<HealthInsuranceCardProps> = ({ onBookSafetyCall }) => {
   const [isExpanded, setIsExpanded] = useState(false);
+  const { createTouchHandlers } = useTouchSupport();
+  const { handleTouchToggle, handleMouseEvents, touchExpandedClass } = createTouchHandlers(isExpanded, setIsExpanded);
 
   return (
-    <div className="relative health-card-container">
+    <div className={`relative health-card-container ${touchExpandedClass}`}>
       {/* Base Health Insurance Card */}
       <div 
-        className={`relative w-full max-w-none sm:max-w-[300px] sm:w-[300px] h-[170px] bg-light-gray rounded-[20px] p-4 sm:p-6 health-card-base cursor-pointer mobile-card-size ${
+        className={`card relative w-full max-w-none sm:max-w-[300px] sm:w-[300px] h-[170px] bg-light-gray rounded-[20px] p-4 sm:p-6 health-card-base cursor-pointer mobile-card-size ${
           isExpanded ? 'z-20' : 'z-10'
         }`}
-        onMouseEnter={() => setIsExpanded(true)}
-        onMouseLeave={() => setIsExpanded(false)}
+        {...handleMouseEvents}
+        onClick={handleTouchToggle}
       >
         {/* Card Content */}
         <div className="flex justify-between items-start h-full">
@@ -43,8 +46,7 @@ const HealthInsuranceCard: React.FC<HealthInsuranceCardProps> = ({ onBookSafetyC
         className={`absolute top-0 left-0 w-full sm:w-[300px] bg-light-gray rounded-[20px] health-card-expanded overflow-hidden shadow-xl ${
           isExpanded ? 'h-[364px] opacity-100 z-30' : 'h-[170px] opacity-0 pointer-events-none'
         }`}
-        onMouseEnter={() => setIsExpanded(true)}
-        onMouseLeave={() => setIsExpanded(false)}
+        {...handleMouseEvents}
       >
         {/* Expanded Content Container */}
         <div className="p-6 h-full flex flex-col">

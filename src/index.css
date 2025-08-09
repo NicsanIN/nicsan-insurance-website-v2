@@ -136,54 +136,31 @@ code {
 }
 
 /* ================================
-   MOBILE-SPECIFIC STYLES ONLY
-   DO NOT MODIFY DESKTOP STYLES ABOVE
+   MOBILE RESPONSIVE STYLES
    ================================ */
 
-/* Global mobile image scaling */
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Prevent horizontal overflow */
-* {
-  box-sizing: border-box;
-}
-
-html, body {
-  overflow-x: hidden;
-}
-
-/* ================================
-   HEADER/NAVBAR MOBILE STYLES
-   ================================ */
-
-/* Mobile Header - 768px and below */
+/* Mobile Header Styles */
 @media (max-width: 768px) {
-  /* Header container adjustments */
   .mobile-header {
-    padding: 0.75rem 1rem !important;
-    position: relative !important;
+    padding: 27px !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
   }
   
-  /* Logo sizing for mobile */
   .mobile-logo {
-    height: 36px !important;
-    width: auto !important;
+    width: 71px !important;
+    height: 52px !important;
   }
   
-  /* Hide desktop navigation on mobile */
   .mobile-nav {
     display: none !important;
   }
   
-  /* Mobile hamburger menu button styling */
   .hamburger-menu {
     display: flex !important;
   }
   
-  /* Mobile dropdown menu */
   .mobile-dropdown {
     position: absolute;
     top: 100%;
@@ -195,77 +172,6 @@ html, body {
     z-index: 40;
   }
   
-  /* Mobile menu button */
-  .mobile-menu-button {
-    width: 100% !important;
-    padding: 0.75rem 1rem !important;
-    font-size: 0.875rem !important;
-    text-align: center !important;
-  }
-}
-
-/* Small Mobile Header - 640px and below */
-@media (max-width: 640px) {
-  .mobile-header {
-    padding: 0.5rem 0.75rem !important;
-  }
-  
-  .mobile-logo {
-    height: 32px !important;
-  }
-  
-  .mobile-menu-button {
-    padding: 0.625rem 0.875rem !important;
-    font-size: 0.8rem !important;
-  }
-}
-
-/* Extra Small Mobile Header - 480px and below */
-@media (max-width: 480px) {
-  .mobile-header {
-    padding: 0.5rem !important;
-  }
-  
-  .mobile-logo {
-    height: 28px !important;
-  }
-  
-  .mobile-menu-button {
-    padding: 0.5rem 0.75rem !important;
-    font-size: 0.75rem !important;
-  }
-}
-
-/* ================================
-   MOBILE HEADER - FIGMA DESIGN
-   ================================ */
-
-@media (max-width: 768px) {
-  /* Header container - matches Figma spacing */
-  .mobile-header {
-    padding: 27px 27px 27px 27px !important;
-    display: flex !important;
-    justify-content: space-between !important;
-    align-items: center !important;
-  }
-  
-  /* Logo sizing - matches Figma dimensions */
-  .mobile-logo {
-    width: 71px !important;
-    height: 52px !important;
-  }
-  
-  /* Desktop navigation - hide on mobile */
-  .mobile-nav {
-    display: none !important;
-  }
-  
-  /* Hamburger menu - show on mobile */
-  .hamburger-menu {
-    display: flex !important;
-  }
-  
-  /* Mobile "Book Call" button - matches Figma */
   .mobile-menu-button {
     width: 167px !important;
     height: 44px !important;
@@ -279,6 +185,7 @@ html, body {
     text-align: center !important;
     border: none !important;
     cursor: pointer !important;
+    padding: 0 !important;
   }
 }
 
