@@ -11,7 +11,7 @@ const HealthInsuranceCard: React.FC<HealthInsuranceCardProps> = ({ onBookSafetyC
     <div className="relative health-card-container">
       {/* Base Health Insurance Card */}
       <div 
-        className={`relative w-[300px] h-[170px] bg-light-gray rounded-[20px] p-6 health-card-base cursor-pointer ${
+        className={`relative w-full max-w-none sm:max-w-[300px] sm:w-[300px] h-[170px] bg-light-gray rounded-[20px] p-4 sm:p-6 health-card-base cursor-pointer ${
           isExpanded ? 'z-20' : 'z-10'
         }`}
         onMouseEnter={() => setIsExpanded(true)}
@@ -21,11 +21,11 @@ const HealthInsuranceCard: React.FC<HealthInsuranceCardProps> = ({ onBookSafetyC
         <div className="flex justify-between items-start h-full">
           <div className="flex flex-col justify-between h-full">
             {/* Title */}
-            <h3 className="font-satoshi font-normal text-[32px] text-design-black leading-[1.16em]">
+            <h3 className="font-satoshi font-normal text-2xl sm:text-[32px] text-design-black leading-[1.16em]">
               Health
             </h3>
             {/* Description */}
-            <p className="font-satoshi font-light text-[17px] text-design-black leading-[1.16em] max-w-[150px]">
+            <p className="font-satoshi font-light text-sm sm:text-[17px] text-design-black leading-[1.16em] max-w-[150px]">
               Stay healthy,<br />stay wealthy
             </p>
           </div>
@@ -33,14 +33,14 @@ const HealthInsuranceCard: React.FC<HealthInsuranceCardProps> = ({ onBookSafetyC
           <img 
             src="/images/healthcare-icon.png" 
             alt="Healthcare Icon" 
-            className="w-[48px] h-[48px] object-contain"
+            className="w-10 h-10 sm:w-[48px] sm:h-[48px] object-contain"
           />
         </div>
       </div>
 
       {/* Expanded Content - Overlay */}
       <div 
-        className={`absolute top-0 left-0 w-[300px] bg-light-gray rounded-[20px] health-card-expanded overflow-hidden shadow-xl ${
+        className={`absolute top-0 left-0 w-full sm:w-[300px] bg-light-gray rounded-[20px] health-card-expanded overflow-hidden shadow-xl ${
           isExpanded ? 'h-[364px] opacity-100 z-30' : 'h-[170px] opacity-0 pointer-events-none'
         }`}
         onMouseEnter={() => setIsExpanded(true)}
@@ -89,7 +89,7 @@ const HealthInsuranceCard: React.FC<HealthInsuranceCardProps> = ({ onBookSafetyC
           <div className="pt-4">
             <button 
               onClick={onBookSafetyCall}
-              className="bg-primary-blue text-button-text font-satoshi font-bold px-4 py-2.5 rounded-[10px] hover:bg-[#012E58] transition-colors text-[14px] shadow-md"
+              className="bg-primary-blue text-button-text font-satoshi font-bold px-4 py-3 sm:py-2.5 rounded-[10px] hover:bg-[#012E58] transition-colors text-sm sm:text-[14px] shadow-md min-h-[44px]"
             >
               Book Safety Call
             </button>

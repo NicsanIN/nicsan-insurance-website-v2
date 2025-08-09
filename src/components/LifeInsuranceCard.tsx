@@ -11,7 +11,7 @@ const LifeInsuranceCard: React.FC<LifeInsuranceCardProps> = ({ onBookSafetyCall 
     <div className="relative life-card-container">
       {/* Base Life Insurance Card */}
       <div 
-        className={`relative w-[300px] h-[170px] bg-light-gray rounded-[20px] p-6 life-card-base cursor-pointer ${
+        className={`relative w-full max-w-none sm:max-w-[300px] sm:w-[300px] h-[170px] bg-light-gray rounded-[20px] p-4 sm:p-6 life-card-base cursor-pointer ${
           isExpanded ? 'z-20' : 'z-10'
         }`}
         onMouseEnter={() => setIsExpanded(true)}
@@ -21,11 +21,11 @@ const LifeInsuranceCard: React.FC<LifeInsuranceCardProps> = ({ onBookSafetyCall 
         <div className="flex justify-between items-start h-full">
           <div className="flex flex-col justify-between h-full">
             {/* Title */}
-            <h3 className="font-satoshi font-normal text-[32px] text-design-black leading-[1.16em]">
+            <h3 className="font-satoshi font-normal text-2xl sm:text-[32px] text-design-black leading-[1.16em]">
               Life
             </h3>
             {/* Description */}
-            <p className="font-satoshi font-light text-[17px] text-design-black leading-[1.16em] max-w-[150px]">
+            <p className="font-satoshi font-light text-sm sm:text-[17px] text-design-black leading-[1.16em] max-w-[150px]">
               Secure your family's<br />future
             </p>
           </div>
@@ -33,7 +33,7 @@ const LifeInsuranceCard: React.FC<LifeInsuranceCardProps> = ({ onBookSafetyCall 
           <img 
             src="/images/life-insurance-icon.png" 
             alt="Life Insurance Icon" 
-            className="w-[48px] h-[48px] object-contain"
+            className="w-10 h-10 sm:w-[48px] sm:h-[48px] object-contain"
           />
         </div>
       </div>
