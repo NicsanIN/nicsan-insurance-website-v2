@@ -184,11 +184,94 @@ html, body {
     overflow-x: hidden;
   }
   
-  /* Ensure grid alignment is maintained */
+  /* Force desktop layout - Hero section side by side */
+  .flex.flex-col.lg\:flex-row {
+    display: flex !important;
+    flex-direction: row !important;
+  }
+  
+  .w-full.lg\:w-\[408px\] {
+    width: 408px !important;
+    flex-shrink: 0 !important;
+  }
+  
+  .w-full.lg\:ml-\[280px\] {
+    margin-left: 280px !important;
+    width: auto !important;
+  }
+  
+  .lg\:min-w-\[1200px\] {
+    min-width: 1200px !important;
+  }
+  
+  /* Force desktop grid layout */
   .grid.grid-cols-1.sm\:grid-cols-2.lg\:grid-cols-2 {
     display: grid !important;
     grid-template-columns: repeat(2, 1fr) !important;
     gap: 1rem !important;
+  }
+  
+  /* Force desktop spacing */
+  .space-y-6.md\:space-y-8 > * + * {
+    margin-top: 2rem !important;
+  }
+  
+  .mb-8.lg\:mb-0 {
+    margin-bottom: 0 !important;
+  }
+  
+  /* Force desktop footer layout */
+  footer .flex.justify-between.items-start {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: flex-start !important;
+  }
+  
+  footer .flex.gap-16 {
+    display: flex !important;
+    gap: 4rem !important;
+  }
+  
+  footer .flex.flex-col.items-start {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+  
+  footer .max-w-2xl {
+    max-width: 32rem !important;
+  }
+  
+  /* Force desktop AboutUs layout */
+  .flex.justify-between.items-start {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: flex-start !important;
+  }
+  
+  .flex.gap-8 {
+    display: flex !important;
+    gap: 2rem !important;
+  }
+  
+  .flex.gap-8.items-start {
+    display: flex !important;
+    gap: 2rem !important;
+    align-items: flex-start !important;
+  }
+  
+  .w-\[280px\].h-\[180px\] {
+    width: 280px !important;
+    height: 180px !important;
+  }
+  
+  .w-\[440px\].h-\[220px\] {
+    width: 440px !important;
+    height: 220px !important;
+  }
+  
+  .flex-shrink-0 {
+    flex-shrink: 0 !important;
   }
   
   /* Hide mobile menu, keep desktop navigation */
