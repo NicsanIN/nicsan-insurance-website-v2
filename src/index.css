@@ -237,53 +237,82 @@ html, body {
 }
 
 /* ================================
-   MOBILE = DESKTOP VIEW (SCALED DOWN)
-   Disable all responsive behavior and zoom out
+   PROPER RESPONSIVE DESIGN
+   Mobile-first approach with proper sizing
    ================================ */
 
-@media (max-width: 768px) {
-  /* Zoom out the entire page */
-  body {
-    zoom: 0.5;
-    min-width: 1440px;
+/* Mobile First - Under 768px */
+@media (max-width: 767px) {
+  /* Stack everything vertically on mobile */
+  .mobile-insurance-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+    padding: 0 1rem !important;
   }
   
-  /* Disable ALL responsive grid behavior */
-  .grid-cols-1 {
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  /* Full width cards on mobile */
+  .mobile-card-size,
+  .w-\\[300px\\],
+  .sm\\:w-\\[300px\\] {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
   }
   
-  .sm\\:grid-cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-  }
-  
-  /* Disable responsive flex behavior */
-  .flex-col {
-    flex-direction: row !important;
-  }
-  
+  /* Stack hero content vertically */
   .lg\\:flex-row {
-    flex-direction: row !important;
-  }
-  
-  /* Force desktop widths */
-  .w-full {
-    width: auto !important;
-  }
-  
-  .lg\\:w-\\[408px\\] {
-    width: 408px !important;
+    flex-direction: column !important;
   }
   
   .lg\\:ml-\\[280px\\] {
-    margin-left: 280px !important;
+    margin-left: 0 !important;
+    margin-top: 2rem !important;
+  }
+  
+  .lg\\:w-\\[408px\\] {
+    width: 100% !important;
   }
   
   .lg\\:min-w-\\[1200px\\] {
-    min-width: 1200px !important;
+    min-width: auto !important;
   }
   
-  /* Navigation changes only */
+  /* Mobile-friendly text sizes */
+  .mobile-title,
+  .text-\\[32px\\] {
+    font-size: 1.5rem !important; /* 24px */
+  }
+  
+  .mobile-subtitle,
+  .text-lg,
+  .sm\\:text-xl,
+  .md\\:text-2xl,
+  .lg\\:text-subheading {
+    font-size: 1rem !important; /* 16px */
+  }
+  
+  .mobile-card-description,
+  .text-\\[17px\\] {
+    font-size: 0.875rem !important; /* 14px */
+  }
+  
+  /* Hero headline mobile size */
+  .text-3xl,
+  .sm\\:text-4xl,
+  .md\\:text-5xl,
+  .lg\\:text-hero {
+    font-size: 2rem !important; /* 32px */
+  }
+  
+  /* Full width buttons on mobile */
+  .mobile-button,
+  button {
+    width: 100% !important;
+    padding: 0.875rem 1rem !important;
+    font-size: 1rem !important;
+  }
+  
+  /* Mobile navigation */
   .mobile-nav {
     display: none !important;
   }
@@ -292,21 +321,34 @@ html, body {
     display: flex !important;
   }
   
+  /* Mobile padding adjustments */
+  .px-10,
+  .sm\\:px-6,
+  .md\\:px-8,
+  .lg\\:px-10 {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+  
   /* Prevent horizontal scroll */
   html, body {
     overflow-x: hidden !important;
   }
 }
 
-@media (max-width: 640px) {
-  body {
-    zoom: 0.4;
+/* Tablets - 768px to 1023px */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .mobile-insurance-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.5rem !important;
   }
 }
 
-@media (max-width: 480px) {
-  body {
-    zoom: 0.35;
+/* Desktop - 1024px and above */
+@media (min-width: 1024px) {
+  .mobile-insurance-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1rem !important;
   }
 }
 
