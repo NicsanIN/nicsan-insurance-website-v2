@@ -237,87 +237,30 @@ html, body {
 }
 
 /* ================================
-   FORCE DESKTOP LAYOUT ON ALL DEVICES
-   Override all responsive classes to maintain desktop layout
+   SIMPLE MOBILE SCALING
+   Just scale the entire page - no layout changes
    ================================ */
 
-/* Mobile - Force Desktop Layout */
 @media (max-width: 768px) {
-  /* Force desktop grid layout on mobile */
-  .grid-cols-1 {
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  /* Set viewport to desktop width and scale down */
+  html {
+    width: 1440px;
+    transform: scale(0.5);
+    transform-origin: 0 0;
   }
   
-  .sm\\:grid-cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  body {
+    width: 1440px;
+    overflow-x: hidden;
   }
   
-  /* Force desktop flexbox layout */
-  .flex-col {
-    flex-direction: row !important;
-  }
-  
-  .lg\\:flex-row {
-    flex-direction: row !important;
-  }
-  
-  /* Force desktop widths */
-  .w-full {
-    width: 408px !important;
-  }
-  
-  .lg\\:w-\\[408px\\] {
-    width: 408px !important;
-  }
-  
-  /* Force desktop margins */
-  .lg\\:ml-\\[280px\\] {
-    margin-left: 280px !important;
-  }
-  
-  /* Force desktop minimum width */
-  .lg\\:min-w-\\[1200px\\] {
-    min-width: 1200px !important;
-  }
-  
-  /* Scale everything down to fit mobile */
-  .max-w-\\[1440px\\] {
-    transform: scale(0.65);
-    transform-origin: top left;
-    width: 154%;
-    margin-bottom: -200px;
-  }
-  
-  /* Hide desktop nav, show hamburger */
+  /* Only change navigation for mobile usability */
   .mobile-nav {
     display: none !important;
   }
   
   .hamburger-menu {
     display: flex !important;
-  }
-  
-  /* Ensure no horizontal scroll */
-  html, body {
-    overflow-x: hidden !important;
-  }
-}
-
-/* Smaller Mobile */
-@media (max-width: 640px) {
-  .max-w-\\[1440px\\] {
-    transform: scale(0.55);
-    width: 182%;
-    margin-bottom: -300px;
-  }
-}
-
-/* Extra Small Mobile */
-@media (max-width: 480px) {
-  .max-w-\\[1440px\\] {
-    transform: scale(0.45);
-    width: 222%;
-    margin-bottom: -400px;
   }
 }
 
