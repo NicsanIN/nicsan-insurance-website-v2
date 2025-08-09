@@ -157,7 +157,7 @@ html, body {
 /* Mobile Scaling - Under 768px */
 @media (max-width: 767px) {
   /* Scale the entire main container to fit mobile */
-  .max-w-\\[1440px\\] {
+  .max-w-\[1440px\] {
     transform: translateX(-50%) scale(0.50);
     transform-origin: top center;
     width: 200% !important; /* Compensate for scaling */
@@ -185,18 +185,18 @@ html, body {
   }
   
   /* Ensure grid alignment is maintained */
-  .grid.grid-cols-1.sm\\:grid-cols-2.lg\\:grid-cols-2 {
+  .grid.grid-cols-1.sm\:grid-cols-2.lg\:grid-cols-2 {
     display: grid !important;
     grid-template-columns: repeat(2, 1fr) !important;
     gap: 1rem !important;
   }
   
   /* Hide mobile menu, keep desktop navigation */
-  .md\\:hidden {
+  .md\:hidden {
     display: none !important;
   }
   
-  .hidden.md\\:flex {
+  .hidden.md\:flex {
     display: flex !important;
   }
 }
@@ -204,14 +204,13 @@ html, body {
 /* Tablet Scaling - 768px to 1023px */
 @media (min-width: 768px) and (max-width: 1023px) {
   /* Slightly smaller scale for tablets */
-  .max-w-\\[1440px\\] {
-    transform: scale(0.75);
+  .max-w-\[1440px\] {
+    transform: translateX(-50%) scale(0.75);
     transform-origin: top center;
     width: 133% !important;
     margin: 0 auto;
     position: relative;
     left: 50%;
-    transform: translateX(-50%) scale(0.75);
   }
   
   body {
@@ -221,7 +220,7 @@ html, body {
 
 /* Small Mobile - Under 425px */
 @media (max-width: 424px) {
-  .max-w-\\[1440px\\] {
+  .max-w-\[1440px\] {
     transform: translateX(-50%) scale(0.38);
     transform-origin: top center;
     width: 263% !important;
@@ -233,7 +232,7 @@ html, body {
 
 /* Ultra Small Mobile - Under 375px */
 @media (max-width: 374px) {
-  .max-w-\\[1440px\\] {
+  .max-w-\[1440px\] {
     transform: translateX(-50%) scale(0.33);
     transform-origin: top center;
     width: 303% !important;
@@ -245,7 +244,7 @@ html, body {
 
 /* Tiny Mobile - Under 320px */
 @media (max-width: 319px) {
-  .max-w-\\[1440px\\] {
+  .max-w-\[1440px\] {
     transform: translateX(-50%) scale(0.28);
     transform-origin: top center;
     width: 357% !important;
