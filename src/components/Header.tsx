@@ -75,21 +75,19 @@ const Header: React.FC = () => {
           />
         </div>
 
-        {/* Navigation */}
-        <div className="flex items-center gap-2 sm:gap-4 md:gap-9 mobile-nav">
-          {/* Products Dropdown */}
-          
-
+        {/* Navigation - Same on all devices */}
+        <div className="flex items-center gap-2 sm:gap-4 md:gap-9">
           {/* Book Safety Call Button */}
           <button 
             onClick={handleBookSafetyCall}
-            className="bg-primary-blue text-button-text font-satoshi font-bold px-3 py-2 sm:px-4 sm:py-3 md:px-5 md:py-3.5 rounded-[10px] hover:bg-[#012E58] transition-colors text-sm sm:text-base min-h-[44px] mobile-button"
+            className="bg-primary-blue text-button-text font-satoshi font-bold px-3 py-2 sm:px-4 sm:py-3 md:px-5 md:py-3.5 rounded-[10px] hover:bg-[#012E58] transition-colors text-sm sm:text-base min-h-[44px]"
           >
-            <span className="hidden sm:inline">Book Safety Call</span>
-            <span className="sm:hidden">Book Call</span>
+            Book Safety Call
           </button>
         </div>
       </header>
+
+
 
       {/* Form Overlay */}
       {showForm && (

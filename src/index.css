@@ -140,103 +140,71 @@ code {
    DO NOT MODIFY DESKTOP STYLES ABOVE
    ================================ */
 
-/* Mobile Tablet Breakpoint - 768px and below */
+/* Global mobile image scaling */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Prevent horizontal overflow */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+/* ================================
+   MOBILE VIEWPORT SCALING
+   Keep laptop layout exactly the same, just scale to fit mobile
+   ================================ */
+
+/* Mobile scaling - 768px and below */
 @media (max-width: 768px) {
-  /* Mobile grid layout for insurance cards */
-  .mobile-insurance-grid {
-    grid-template-columns: 1fr !important;
-    gap: 1rem !important;
+  /* Scale the entire page content to fit mobile */
+  body {
+    zoom: 0.7;
+    -moz-transform: scale(0.7);
+    -moz-transform-origin: 0 0;
+    -webkit-transform: scale(0.7);
+    -webkit-transform-origin: 0 0;
+    transform: scale(0.7);
+    transform-origin: 0 0;
   }
   
-  /* Mobile card sizing */
-  .mobile-card-size {
-    width: 100% !important;
-    max-width: 350px !important;
-    margin: 0 auto !important;
-  }
-  
-  /* Mobile text scaling */
-  .mobile-title {
-    font-size: 1.5rem !important;
-    line-height: 1.3 !important;
-  }
-  
-  .mobile-subtitle {
-    font-size: 1rem !important;
-    line-height: 1.4 !important;
-  }
-  
-  .mobile-button {
-    padding: 0.75rem 1.5rem !important;
-    font-size: 0.9rem !important;
-  }
-  
-  /* Mobile form overlay */
-  .mobile-form-overlay {
-    padding: 1rem !important;
-    width: 95% !important;
-    max-width: 400px !important;
-  }
-  
-  /* Mobile header adjustments */
-  .mobile-header {
-    padding: 1rem !important;
-  }
-  
-  .mobile-logo {
-    height: 40px !important;
-  }
-  
-  /* Mobile navigation */
-  .mobile-nav {
-    gap: 1rem !important;
+  /* Adjust viewport to prevent horizontal scroll */
+  html {
+    width: 142.857%; /* 100% / 0.7 */
   }
 }
 
-/* Small Mobile - 640px and below */
+/* Small mobile scaling - 640px and below */
 @media (max-width: 640px) {
-  /* Smaller mobile adjustments */
-  .mobile-title {
-    font-size: 1.25rem !important;
+  body {
+    zoom: 0.6;
+    -moz-transform: scale(0.6);
+    -webkit-transform: scale(0.6);
+    transform: scale(0.6);
   }
   
-  .mobile-subtitle {
-    font-size: 0.9rem !important;
-  }
-  
-  .mobile-button {
-    padding: 0.6rem 1.2rem !important;
-    font-size: 0.85rem !important;
-  }
-  
-  .mobile-form-overlay {
-    width: 90% !important;
-    padding: 0.8rem !important;
-  }
-  
-  /* Mobile card description */
-  .mobile-card-description {
-    font-size: 0.8rem !important;
-    line-height: 1.3 !important;
+  html {
+    width: 166.667%; /* 100% / 0.6 */
   }
 }
 
-/* Extra Small Mobile - 480px and below */
+/* Extra small mobile scaling - 480px and below */
 @media (max-width: 480px) {
-  .mobile-title {
-    font-size: 1.1rem !important;
+  body {
+    zoom: 0.5;
+    -moz-transform: scale(0.5);
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
   }
   
-  .mobile-subtitle {
-    font-size: 0.85rem !important;
+  html {
+    width: 200%; /* 100% / 0.5 */
   }
-  
-  .mobile-button {
-    padding: 0.5rem 1rem !important;
-    font-size: 0.8rem !important;
-  }
-  
-  .mobile-card-description {
-    font-size: 0.75rem !important;
-  }
-} 
+}
+
+ 

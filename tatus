@@ -1,0 +1,13 @@
+[1mdiff --git a/src/components/Hero.tsx b/src/components/Hero.tsx[m
+[1mindex 1637d55a..57930952 100644[m
+[1m--- a/src/components/Hero.tsx[m
+[1m+++ b/src/components/Hero.tsx[m
+[36m@@ -509,7 +509,7 @@[m [mconst Hero: React.FC = () => {[m
+ [m
+       {/* Hero Form Overlay */}[m
+       {showHeroForm && ([m
+[31m-        <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center">[m
+[32m+[m[32m                    <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center">[m
+           <div className="bg-light-gray p-6 w-full max-w-md rounded-[24px] overflow-hidden relative mobile-form-overlay">[m
+             {/* X Close Button */}[m
+             <button [m

@@ -509,7 +509,7 @@ const Hero: React.FC = () => {
 
       {/* Hero Form Overlay */}
       {showHeroForm && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center">
+                    <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center">
           <div className="bg-light-gray p-6 w-full max-w-md rounded-[24px] overflow-hidden relative mobile-form-overlay">
             {/* X Close Button */}
             <button 
