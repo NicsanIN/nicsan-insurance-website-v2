@@ -310,7 +310,7 @@ const Hero: React.FC = () => {
         {/* Left Content - Responsive layout */}
         <div className="w-full lg:w-[408px] space-y-6 md:space-y-8 mb-8 lg:mb-0">
           {/* Main Headline */}
-          <h1 className="font-clash-display font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-hero text-design-black leading-[0.93em]">
+          <h1 className="font-clash-display font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-hero text-design-black leading-[0.93em] mobile-title">
             Insurance<br />
             Minus the<br />
             Drama
@@ -318,7 +318,7 @@ const Hero: React.FC = () => {
 
           {/* Subtitle */}
           <p 
-            className="font-satoshi font-normal text-lg sm:text-xl md:text-2xl lg:text-subheading text-design-black leading-[1.16em] max-w-full lg:max-w-[408px] mb-6 md:mb-10"
+            className="font-satoshi font-normal text-lg sm:text-xl md:text-2xl lg:text-subheading text-design-black leading-[1.16em] max-w-full lg:max-w-[408px] mb-6 md:mb-10 mobile-subtitle"
           >
             No drama, just coverage that works when life doesn't.
           </p>
@@ -326,7 +326,7 @@ const Hero: React.FC = () => {
           {/* CTA Button */}
           <button 
             onClick={handleHeroBookSafetyCall}
-            className="bg-primary-blue text-button-text font-satoshi font-bold px-6 py-4 md:px-5 md:py-3.5 rounded-[10px] hover:bg-[#012E58] transition-colors w-full sm:w-auto min-h-[44px]"
+            className="bg-primary-blue text-button-text font-satoshi font-bold px-6 py-4 md:px-5 md:py-3.5 rounded-[10px] hover:bg-[#012E58] transition-colors w-full sm:w-auto min-h-[44px] mobile-button"
           >
             Book Safety Call
           </button>
@@ -339,7 +339,7 @@ const Hero: React.FC = () => {
 
         {/* Right Product Grid - Responsive positioning */}
         <div className="w-full lg:ml-[280px] relative">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 lg:gap-x-4 lg:gap-y-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 lg:gap-x-4 lg:gap-y-4 mobile-insurance-grid">
             {/* Health Insurance Card */}
             <div className="relative">
               <HealthInsuranceCard onBookSafetyCall={() => handleBookSafetyCall('health')} />
@@ -510,7 +510,7 @@ const Hero: React.FC = () => {
       {/* Hero Form Overlay */}
       {showHeroForm && (
         <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center">
-          <div className="bg-light-gray p-6 w-full max-w-md rounded-[24px] overflow-hidden relative">
+          <div className="bg-light-gray p-6 w-full max-w-md rounded-[24px] overflow-hidden relative mobile-form-overlay">
             {/* X Close Button */}
             <button 
               onClick={() => {

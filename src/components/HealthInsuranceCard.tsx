@@ -11,7 +11,7 @@ const HealthInsuranceCard: React.FC<HealthInsuranceCardProps> = ({ onBookSafetyC
     <div className="relative health-card-container">
       {/* Base Health Insurance Card */}
       <div 
-        className={`relative w-full max-w-none sm:max-w-[300px] sm:w-[300px] h-[170px] bg-light-gray rounded-[20px] p-4 sm:p-6 health-card-base cursor-pointer ${
+        className={`relative w-full max-w-none sm:max-w-[300px] sm:w-[300px] h-[170px] bg-light-gray rounded-[20px] p-4 sm:p-6 health-card-base cursor-pointer mobile-card-size ${
           isExpanded ? 'z-20' : 'z-10'
         }`}
         onMouseEnter={() => setIsExpanded(true)}
@@ -21,11 +21,11 @@ const HealthInsuranceCard: React.FC<HealthInsuranceCardProps> = ({ onBookSafetyC
         <div className="flex justify-between items-start h-full">
           <div className="flex flex-col justify-between h-full">
             {/* Title */}
-            <h3 className="font-satoshi font-normal text-2xl sm:text-[32px] text-design-black leading-[1.16em]">
+            <h3 className="font-satoshi font-normal text-2xl sm:text-[32px] text-design-black leading-[1.16em] mobile-title">
               Health
             </h3>
             {/* Description */}
-            <p className="font-satoshi font-light text-sm sm:text-[17px] text-design-black leading-[1.16em] max-w-[150px]">
+            <p className="font-satoshi font-light text-sm sm:text-[17px] text-design-black leading-[1.16em] max-w-[150px] mobile-card-description">
               Stay healthy,<br />stay wealthy
             </p>
           </div>

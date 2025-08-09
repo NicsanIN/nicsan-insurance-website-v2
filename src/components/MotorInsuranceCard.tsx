@@ -11,7 +11,7 @@ const MotorInsuranceCard: React.FC<MotorInsuranceCardProps> = ({ onBookSafetyCal
     <div className="relative motor-card-container">
       {/* Base Motor Insurance Card */}
       <div 
-        className={`relative w-[300px] h-[170px] bg-light-gray rounded-[20px] p-6 motor-card-base cursor-pointer ${
+        className={`relative w-[300px] h-[170px] bg-light-gray rounded-[20px] p-6 motor-card-base cursor-pointer mobile-card-size ${
           isExpanded ? 'z-20' : 'z-10'
         }`}
         onMouseEnter={() => setIsExpanded(true)}
@@ -21,7 +21,7 @@ const MotorInsuranceCard: React.FC<MotorInsuranceCardProps> = ({ onBookSafetyCal
         <div className="flex justify-between items-start h-full">
           <div className="flex flex-col justify-between h-full">
             {/* Title */}
-            <h3 className="font-satoshi font-normal text-[32px] text-design-black leading-[1.16em]">
+            <h3 className="font-satoshi font-normal text-[32px] text-design-black leading-[1.16em] mobile-title">
               Motor
             </h3>
             {/* Description */}

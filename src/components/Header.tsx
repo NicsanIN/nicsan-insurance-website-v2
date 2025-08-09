@@ -65,25 +65,25 @@ const Header: React.FC = () => {
 
   return (
     <>
-      <header className="flex justify-between items-center py-4 sm:py-6 md:py-8">
+      <header className="flex justify-between items-center py-4 sm:py-6 md:py-8 mobile-header">
         {/* Logo */}
         <div className="flex items-center">
           <img 
             src="/images/logo-favicon.png" 
             alt="Nicsan Insurance" 
-            className="w-12 h-9 sm:w-16 sm:h-12 md:w-[71px] md:h-[52px]"
+            className="w-12 h-9 sm:w-16 sm:h-12 md:w-[71px] md:h-[52px] mobile-logo"
           />
         </div>
 
         {/* Navigation */}
-        <div className="flex items-center gap-2 sm:gap-4 md:gap-9">
+        <div className="flex items-center gap-2 sm:gap-4 md:gap-9 mobile-nav">
           {/* Products Dropdown */}
           
 
           {/* Book Safety Call Button */}
           <button 
             onClick={handleBookSafetyCall}
-            className="bg-primary-blue text-button-text font-satoshi font-bold px-3 py-2 sm:px-4 sm:py-3 md:px-5 md:py-3.5 rounded-[10px] hover:bg-[#012E58] transition-colors text-sm sm:text-base min-h-[44px]"
+            className="bg-primary-blue text-button-text font-satoshi font-bold px-3 py-2 sm:px-4 sm:py-3 md:px-5 md:py-3.5 rounded-[10px] hover:bg-[#012E58] transition-colors text-sm sm:text-base min-h-[44px] mobile-button"
           >
             <span className="hidden sm:inline">Book Safety Call</span>
             <span className="sm:hidden">Book Call</span>
