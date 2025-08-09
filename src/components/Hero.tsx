@@ -20,87 +20,30 @@ interface Product {
 }
 
 const Hero: React.FC = () => {
-  const [showForm, setShowForm] = useState(false);
-  const [activeCard, setActiveCard] = useState<'health' | 'life' | 'motor' | 'travel' | 'cyber' | 'home' | null>(null);
-  const [products, setProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState(true);
-  const [formData, setFormData] = useState<Record<string, string>>({});
-  const [submitting, setSubmitting] = useState(false);
   const [showHeroForm, setShowHeroForm] = useState(false);
   const [heroFormData, setHeroFormData] = useState({
     name: '',
     phone: ''
   });
   const [heroSubmitting, setHeroSubmitting] = useState(false);
-  const [showThankYou, setShowThankYou] = useState(false);
   const [showHeroThankYou, setShowHeroThankYou] = useState(false);
 
-  // Fetch products from API
+  // Initial loading guard (no remote data needed now)
   useEffect(() => {
-    const fetchProducts = async () => {
-      try {
-        const products = await apiService.getProducts();
-        setProducts(products);
-      } catch (error) {
-        console.error('Error fetching products:', error);
-        // Use fallback data
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchProducts();
+    setLoading(false);
   }, []);
 
-  const handleBookSafetyCall = (cardType: 'health' | 'life' | 'motor' | 'travel' | 'cyber' | 'home') => {
-    if (showHeroForm) {
-      setShowHeroForm(false);
-      setHeroFormData({ name: '', phone: '' });
-    }
-    setActiveCard(cardType);
-    setShowForm(true);
-  };
-
-  const handleHeroBookSafetyCall = () => {
-    if (showForm) {
-      setShowForm(false);
-      setActiveCard(null);
-      setFormData({});
-    }
+  const handleBookSafetyCall = (_cardType: 'health' | 'life' | 'motor' | 'travel' | 'cyber' | 'home') => {
+    // Open the quick contact form for mobile
     setShowHeroForm(true);
   };
 
-  const handleFormSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setSubmitting(true);
-    
-    try {
-      const product = products.find(p => p.slug === activeCard);
-      const productId = product ? product.id : null;
-
-      await apiService.createSafetyCall({
-        product_id: productId,
-        customer_name: formData['Name'] || formData['name'] || '',
-        phone_number: formData['Phone No.'] || formData['phone'] || '',
-        email: formData['Email'] || formData['email'] || '',
-        form_data: formData
-      });
-
-      await emailService.sendFormspreeNotification({
-        product_id: productId,
-        customer_name: formData['Name'] || formData['name'] || '',
-        phone_number: formData['Phone No.'] || formData['phone'] || '',
-        email: formData['Email'] || formData['email'] || '',
-        form_data: formData
-      });
-
-      setShowThankYou(true);
-    } catch (error) {
-      console.error('Error submitting form:', error);
-    } finally {
-      setSubmitting(false);
-    }
+  const handleHeroBookSafetyCall = () => {
+    setShowHeroForm(true);
   };
+
+  // Removed unused product form submit logic to satisfy CI lint rules
 
   const handleHeroFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
