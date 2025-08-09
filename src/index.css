@@ -155,6 +155,153 @@ html, body {
   overflow-x: hidden;
 }
 
+/* ================================
+   HEADER/NAVBAR MOBILE STYLES
+   ================================ */
 
+/* Mobile Header - 768px and below */
+@media (max-width: 768px) {
+  /* Header container adjustments */
+  .mobile-header {
+    padding: 0.75rem 1rem !important;
+    position: relative !important;
+  }
+  
+  /* Logo sizing for mobile */
+  .mobile-logo {
+    height: 36px !important;
+    width: auto !important;
+  }
+  
+  /* Hide desktop navigation on mobile */
+  .mobile-nav {
+    display: none !important;
+  }
+  
+  /* Mobile hamburger menu button styling */
+  .hamburger-menu {
+    display: flex !important;
+  }
+  
+  /* Mobile dropdown menu */
+  .mobile-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    border-top: 1px solid #e5e7eb;
+    z-index: 40;
+  }
+  
+  /* Mobile menu button */
+  .mobile-menu-button {
+    width: 100% !important;
+    padding: 0.75rem 1rem !important;
+    font-size: 0.875rem !important;
+    text-align: center !important;
+  }
+}
+
+/* Small Mobile Header - 640px and below */
+@media (max-width: 640px) {
+  .mobile-header {
+    padding: 0.5rem 0.75rem !important;
+  }
+  
+  .mobile-logo {
+    height: 32px !important;
+  }
+  
+  .mobile-menu-button {
+    padding: 0.625rem 0.875rem !important;
+    font-size: 0.8rem !important;
+  }
+}
+
+/* Extra Small Mobile Header - 480px and below */
+@media (max-width: 480px) {
+  .mobile-header {
+    padding: 0.5rem !important;
+  }
+  
+  .mobile-logo {
+    height: 28px !important;
+  }
+  
+  .mobile-menu-button {
+    padding: 0.5rem 0.75rem !important;
+    font-size: 0.75rem !important;
+  }
+}
+
+/* ================================
+   DESKTOP-LIKE MOBILE VIEW
+   Keep exact same layout, just scale everything down
+   ================================ */
+
+/* Mobile Scaling - 768px and below */
+@media (max-width: 768px) {
+  /* Scale the entire page content */
+  body {
+    zoom: 0.8;
+  }
+  
+  /* Alternative scaling approach using transform */
+  .max-w-\\[1440px\\] {
+    transform: scale(0.8);
+    transform-origin: top left;
+    width: 125%; /* Compensate for scaling */
+  }
+  
+  /* Ensure no horizontal scroll */
+  html, body {
+    overflow-x: hidden !important;
+  }
+  
+  /* Keep hamburger menu for navigation */
+  .mobile-header {
+    padding: 0.75rem 1rem !important;
+    position: relative !important;
+  }
+  
+  .mobile-logo {
+    height: 36px !important;
+    width: auto !important;
+  }
+  
+  .mobile-nav {
+    display: none !important;
+  }
+  
+  .hamburger-menu {
+    display: flex !important;
+  }
+}
+
+/* Smaller Mobile - 640px and below */
+@media (max-width: 640px) {
+  body {
+    zoom: 0.7;
+  }
+  
+  .max-w-\\[1440px\\] {
+    transform: scale(0.7);
+    width: 143%; /* Compensate for scaling */
+  }
+}
+
+/* Extra Small Mobile - 480px and below */
+@media (max-width: 480px) {
+  body {
+    zoom: 0.6;
+  }
+  
+  .max-w-\\[1440px\\] {
+    transform: scale(0.6);
+    width: 167%; /* Compensate for scaling */
+  }
+}
 
  

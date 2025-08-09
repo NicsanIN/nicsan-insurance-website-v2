@@ -4,6 +4,7 @@ import emailService from '../services/emailService';
 
 const Header: React.FC = () => {
   const [showForm, setShowForm] = useState(false);
+  const [showMobileMenu, setShowMobileMenu] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     phone: ''
@@ -75,19 +76,47 @@ const Header: React.FC = () => {
           />
         </div>
 
-        {/* Navigation - Same on all devices */}
-        <div className="flex items-center gap-2 sm:gap-4 md:gap-9">
+        {/* Desktop Navigation */}
+        <div className="hidden md:flex items-center gap-2 sm:gap-4 md:gap-9 mobile-nav">
           {/* Book Safety Call Button */}
           <button 
             onClick={handleBookSafetyCall}
-            className="bg-primary-blue text-button-text font-satoshi font-bold px-3 py-2 sm:px-4 sm:py-3 md:px-5 md:py-3.5 rounded-[10px] hover:bg-[#012E58] transition-colors text-sm sm:text-base min-h-[44px]"
+            className="bg-primary-blue text-button-text font-satoshi font-bold px-3 py-2 sm:px-4 sm:py-3 md:px-5 md:py-3.5 rounded-[10px] hover:bg-[#012E58] transition-colors text-sm sm:text-base min-h-[44px] mobile-button"
           >
             Book Safety Call
           </button>
         </div>
+
+        {/* Mobile Hamburger Menu Button */}
+        <div className="md:hidden hamburger-menu">
+          <button 
+            onClick={() => setShowMobileMenu(!showMobileMenu)}
+            className="flex flex-col justify-center items-center w-8 h-8 space-y-1"
+            aria-label="Toggle mobile menu"
+          >
+            <div className={`w-6 h-0.5 bg-gray-800 transition-all duration-300 ${showMobileMenu ? 'rotate-45 translate-y-2' : ''}`}></div>
+            <div className={`w-6 h-0.5 bg-gray-800 transition-all duration-300 ${showMobileMenu ? 'opacity-0' : ''}`}></div>
+            <div className={`w-6 h-0.5 bg-gray-800 transition-all duration-300 ${showMobileMenu ? '-rotate-45 -translate-y-2' : ''}`}></div>
+          </button>
+        </div>
       </header>
 
-
+      {/* Mobile Menu Dropdown */}
+      {showMobileMenu && (
+        <div className="md:hidden mobile-dropdown">
+          <div className="px-4 py-3 space-y-3">
+            <button 
+              onClick={() => {
+                handleBookSafetyCall();
+                setShowMobileMenu(false);
+              }}
+              className="bg-primary-blue text-button-text font-satoshi font-bold rounded-[10px] hover:bg-[#012E58] transition-colors mobile-menu-button"
+            >
+              Book Safety Call
+            </button>
+          </div>
+        </div>
+      )}
 
       {/* Form Overlay */}
       {showForm && (
