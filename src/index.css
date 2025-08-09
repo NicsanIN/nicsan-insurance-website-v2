@@ -136,11 +136,11 @@ code {
 }
 
 /* ================================
-   MOBILE-SPECIFIC STYLES ONLY
+   RESPONSIVE DESIGN - ALL SCREEN SIZES
    DO NOT MODIFY DESKTOP STYLES ABOVE
    ================================ */
 
-/* Global mobile image scaling */
+/* Global responsive image scaling */
 img {
   max-width: 100%;
   height: auto;
@@ -153,6 +153,165 @@ img {
 
 html, body {
   overflow-x: hidden;
+}
+
+/* ================================
+   RESPONSIVE BREAKPOINTS
+   Mobile: 320px - 767px
+   Tablet: 768px - 1023px  
+   Desktop: 1024px+
+   ================================ */
+
+/* Mobile Navigation - Under 768px */
+@media (max-width: 767px) {
+  /* Hide desktop navigation, show mobile menu */
+  .hidden.md\\:flex {
+    display: none !important;
+  }
+  
+  .md\\:hidden {
+    display: flex !important;
+  }
+  
+  /* Mobile header adjustments */
+  header {
+    padding: 1rem !important;
+  }
+  
+  /* Mobile logo sizing */
+  header img {
+    height: 40px !important;
+    width: auto !important;
+  }
+}
+
+/* Mobile Layout - Under 768px */
+@media (max-width: 767px) {
+  /* Container padding for mobile */
+  .px-4.sm\\:px-6.md\\:px-8.lg\\:px-10 {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+  
+  /* Hero section mobile layout */
+  .lg\\:flex-row {
+    flex-direction: column !important;
+  }
+  
+  .lg\\:ml-\\[280px\\] {
+    margin-left: 0 !important;
+    margin-top: 2rem !important;
+  }
+  
+  .lg\\:w-\\[408px\\] {
+    width: 100% !important;
+  }
+  
+  .lg\\:min-w-\\[1200px\\] {
+    min-width: auto !important;
+  }
+  
+  /* Mobile typography scaling */
+  .text-3xl.sm\\:text-4xl.md\\:text-5xl.lg\\:text-hero {
+    font-size: 2rem !important; /* 32px */
+    line-height: 1.1 !important;
+  }
+  
+  .text-lg.sm\\:text-xl.md\\:text-2xl.lg\\:text-subheading {
+    font-size: 1.125rem !important; /* 18px */
+    line-height: 1.4 !important;
+  }
+  
+  /* Insurance cards grid - single column on mobile */
+  .grid.grid-cols-1.sm\\:grid-cols-2.lg\\:grid-cols-2 {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+  
+  /* Mobile card sizing */
+  .w-full.max-w-none.sm\\:max-w-\\[300px\\].sm\\:w-\\[300px\\],
+  .w-\\[300px\\] {
+    width: 100% !important;
+    max-width: none !important;
+  }
+  
+  /* Mobile button styling */
+  button {
+    min-height: 44px !important; /* Touch-friendly */
+    padding: 0.75rem 1rem !important;
+  }
+  
+  /* Full-width buttons on mobile */
+  .w-full.sm\\:w-auto {
+    width: 100% !important;
+  }
+  
+  /* Mobile form adjustments */
+  .max-w-sm.sm\\:max-w-md {
+    max-width: 90% !important;
+  }
+}
+
+/* Tablet Layout - 768px to 1023px */
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* Container padding for tablet */
+  .px-4.sm\\:px-6.md\\:px-8.lg\\:px-10 {
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+  }
+  
+  /* Insurance cards - 2 columns on tablet */
+  .grid.grid-cols-1.sm\\:grid-cols-2.lg\\:grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.5rem !important;
+  }
+  
+  /* Tablet hero adjustments */
+  .lg\\:flex-row {
+    flex-direction: column !important;
+  }
+  
+  .lg\\:ml-\\[280px\\] {
+    margin-left: 0 !important;
+    margin-top: 2rem !important;
+  }
+}
+
+/* Small Mobile - Under 425px */
+@media (max-width: 424px) {
+  /* Extra small mobile adjustments */
+  .px-4.sm\\:px-6.md\\:px-8.lg\\:px-10 {
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
+  }
+  
+  /* Smaller typography for very small screens */
+  .text-3xl.sm\\:text-4xl.md\\:text-5xl.lg\\:text-hero {
+    font-size: 1.75rem !important; /* 28px */
+  }
+  
+  .text-lg.sm\\:text-xl.md\\:text-2xl.lg\\:text-subheading {
+    font-size: 1rem !important; /* 16px */
+  }
+  
+  /* Tighter spacing on small mobile */
+  .space-y-6.md\\:space-y-8 > * + * {
+    margin-top: 1rem !important;
+  }
+}
+
+/* Ultra Small Mobile - Under 375px */
+@media (max-width: 374px) {
+  /* Ultra compact layout */
+  .px-4.sm\\:px-6.md\\:px-8.lg\\:px-10 {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
+  
+  /* Very small typography */
+  .text-3xl.sm\\:text-4xl.md\\:text-5xl.lg\\:text-hero {
+    font-size: 1.5rem !important; /* 24px */
+  }
 }
 
 
