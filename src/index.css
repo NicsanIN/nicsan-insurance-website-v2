@@ -282,6 +282,103 @@ html, body {
   }
 }
 
+/* ================================
+   MOBILE HERO SECTION - FIGMA DESIGN
+   ================================ */
+
+@media (max-width: 768px) {
+  /* Hero container - stack vertically */
+  .lg\\:flex-row {
+    flex-direction: column !important;
+  }
+  
+  /* Remove desktop left margin and width constraints */
+  .lg\\:ml-\\[280px\\] {
+    margin-left: 0 !important;
+    margin-top: 0 !important;
+  }
+  
+  .lg\\:w-\\[408px\\] {
+    width: 100% !important;
+  }
+  
+  .lg\\:min-w-\\[1200px\\] {
+    min-width: auto !important;
+  }
+  
+  /* Main headline - matches Figma typography */
+  .mobile-title,
+  .text-3xl,
+  .sm\\:text-4xl,
+  .md\\:text-5xl,
+  .lg\\:text-hero {
+    font-family: 'Clash Display', sans-serif !important;
+    font-weight: 600 !important;
+    font-size: 53px !important;
+    line-height: 0.93em !important;
+    text-align: left !important;
+    color: #000000 !important;
+    margin-bottom: 0 !important;
+    padding: 0 27px !important;
+  }
+  
+  /* Subtitle - matches Figma */
+  .mobile-subtitle,
+  .text-lg,
+  .sm\\:text-xl,
+  .md\\:text-2xl,
+  .lg\\:text-subheading {
+    font-family: 'Satoshi', sans-serif !important;
+    font-weight: 400 !important;
+    font-size: 24.79px !important;
+    line-height: 1.16em !important;
+    text-align: left !important;
+    color: #000000 !important;
+    padding: 0 27px !important;
+    margin-top: 8px !important;
+  }
+  
+  /* Hero CTA button - full width, matches Figma */
+  .mobile-button {
+    width: calc(100% - 54px) !important;
+    height: 44px !important;
+    margin: 20px 27px !important;
+    background: #004E98 !important;
+    border-radius: 10px !important;
+    color: #E9E9E9 !important;
+    font-family: 'Satoshi', sans-serif !important;
+    font-weight: 700 !important;
+    font-size: 17.31px !important;
+    line-height: 1em !important;
+    text-align: center !important;
+    border: none !important;
+    cursor: pointer !important;
+  }
+  
+  /* Trust text - matches Figma */
+  .hero-trust-text {
+    font-family: 'Satoshi', sans-serif !important;
+    font-weight: 400 !important;
+    font-size: 17.05px !important;
+    line-height: 1.16em !important;
+    text-align: left !important;
+    color: #000000 !important;
+    padding: 0 27px !important;
+    margin-top: 5px !important;
+  }
+  
+  /* Hero section spacing */
+  .hero-section {
+    padding-top: 48px !important;
+  }
+  
+  /* Left content container */
+  .hero-left-content {
+    width: 100% !important;
+    margin-bottom: 40px !important;
+  }
+}
+
 
 
  
