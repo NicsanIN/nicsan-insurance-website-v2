@@ -65,25 +65,25 @@ const Header: React.FC = () => {
 
   return (
     <>
-      <header className="flex justify-between items-center py-4 lg:py-8 px-4 lg:px-0">
+      <header className="flex justify-between items-center py-8">
         {/* Logo */}
         <div className="flex items-center">
           <img 
             src="/images/logo-favicon.png" 
             alt="Nicsan Insurance" 
-            className="w-12 h-9 lg:w-[71px] lg:h-[52px]"
+            className="w-[71px] h-[52px]"
           />
         </div>
 
         {/* Navigation */}
-        <div className="flex items-center gap-4 lg:gap-9">
+        <div className="flex items-center gap-9">
           {/* Products Dropdown */}
           
 
           {/* Book Safety Call Button */}
           <button 
             onClick={handleBookSafetyCall}
-            className="bg-primary-blue text-button-text font-satoshi font-bold px-3 py-2 lg:px-5 lg:py-3.5 rounded-[10px] hover:bg-[#012E58] transition-colors text-sm lg:text-base"
+            className="bg-primary-blue text-button-text font-satoshi font-bold px-5 py-3.5 rounded-[10px] hover:bg-[#012E58] transition-colors"
           >
             Book Safety Call
           </button>
